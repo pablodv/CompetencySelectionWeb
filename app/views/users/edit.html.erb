@@ -1,0 +1,64 @@
+<h1>Edit personal information</h1>
+
+<% form_for @user, :html => { :multipart => true }  do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :first_name %><br/>
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br/>
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :dni %><br/>
+    <%= f.text_field :dni %>
+  </p>
+  <p>
+    <%= f.label :email %><br/>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :photo %><br/>
+    <%= f.file_field :photo %>
+  </p>  
+  <p>
+    <%= f.label :gender %><br />
+    <%= f.select :gender, User::GENDER, {:include_blank => 'Select a gender'} %>
+  </p>
+  <p>
+    <%= f.label :marital_status %><br />
+    <%= f.select :marital_status, User::STATUS, {:include_blank => 'Select a status'} %>
+  </p>
+  <p>
+    <%= f.label :address %><br/>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :phone %><br/>
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :mobile_phone %><br/>
+    <%= f.text_field :mobile_phone %>
+  </p>
+  <p>
+    <%= f.label :country_id %><br/>
+    <%= f.select :country_id, User::COUNTRY, {:include_blank => 'Select a country'} %>
+  </p>
+  <p>
+    <%= f.label :state_id %><br/>
+    <%= f.select :state_id, User::STATE, {:include_blank => 'Select a state'} %>
+  </p>
+  <% if permitted_to? :index, current_user %>
+    <p>
+     <%= f.label :roles %><br />
+      <% for role in Role.all %>
+        <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+        <%=h role.name %><br />
+      <% end %>
+    </p>
+  <% end %>
+  <%= f.submit "Update" %>
+<% end %>
+

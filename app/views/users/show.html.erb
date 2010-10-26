@@ -1,0 +1,59 @@
+<p>
+  <%= image_tag @user.photo.url(:small) %>
+</p>
+<p>
+  <b>Login:</b>
+  <%= @user.login %>
+</p>
+<p>
+  <b>First Name:</b>
+  <%= @user.first_name %>
+</p>
+<p>
+  <b>Last Name:</b>
+  <%= @user.last_name %>
+</p>
+<p>
+  <b>DNI:</b>
+  <%= @user.dni %>
+</p>
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+<p>
+  <b>Gender:</b>
+  <%= @user.gender %>
+</p>
+<p>
+  <b>Marital status:</b>
+  <%= @user.marital_status %>
+</p>
+<p>
+  <b>Address:</b>
+  <%= @user.address %>
+</p>
+<p>
+  <b>Phone:</b>
+  <%= @user.phone%>
+</p>
+<p>
+  <b>Mobile Phone:</b>
+  <%= @user.mobile_phone %>
+</p>
+<p>
+  <b>Country:</b>
+  <%= @user.country_id %>
+</p>
+<p>
+  <b>State:</b>
+  <%= @user.state_id %>
+</p>
+<p>
+  <b>Role:</b>
+  <% @user.roles.each do |role| %>
+    <%= role.name %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_user_path %>

@@ -1,0 +1,19 @@
+<% if permitted_to? :index, :users %>
+  <%= link_to 'Users', users_path %>
+  |  
+  <%= link_to 'Institutes', institutes_path %>
+  |
+  <%= link_to 'Specialties', specialties_path %>
+<% end %>
+<br/>
+<%= link_to 'Personal Information', user_path(current_user) %>
+|
+<%= link_to 'Secondary Education' %>
+|
+<%= link_to 'Tertiary Education' %>
+|
+<%= link_to 'University Education' %>
+|
+<%= link_to 'Graduate Education' %>
+|
+<%= link_to 'Jobs' %>

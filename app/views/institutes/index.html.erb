@@ -1,0 +1,12 @@
+<%= link_to 'Add Institute', new_institute_path %>
+<br/>
+<br/>
+<% @institutes.each do |institute| %>
+  <%= institute.name %><br/>
+  <%= institute.type %>
+  <%= link_to 'Show', institute_path(institute) %>
+  |
+  <%= link_to 'Edit', edit_institute_path(institute) %>
+  |
+  <%= link_to 'Delete', institute, :method => :delete, :confirm => "Are you sure?" %><br/>
+<% end %>
