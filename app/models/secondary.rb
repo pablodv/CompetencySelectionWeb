@@ -1,0 +1,3 @@
+class Secondary < Study
+  
+end

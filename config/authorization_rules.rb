@@ -1,7 +1,7 @@
 authorization do
   role :admin do
-    has_permission_on [:institutes, :specialties, :roles], :to => [:index, :show, :new, :create, :edit, :update, :destroy]
-    has_permission_on :users, :to => [:index, :show, :edit, :update, :new, :create]
+    has_permission_on [:institutes, :specialties, :roles,:users, :studies], :to => :manage
+    has_permission_on :studies, :to => [:manage, :level]
   end
 
   role :register do
@@ -15,3 +15,8 @@ authorization do
   end
 end
 
+privileges do
+  privilege :manage do
+    includes :index, :show, :new, :create, :edit, :update, :destroy
+  end
+end

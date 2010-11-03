@@ -3,7 +3,7 @@
 <br/>
 <% @institutes.each do |institute| %>
   <%= institute.name %><br/>
-  <%= institute.type %>
+  <%= institute.level %>
   <%= link_to 'Show', institute_path(institute) %>
   |
   <%= link_to 'Edit', edit_institute_path(institute) %>

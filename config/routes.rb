@@ -45,17 +45,21 @@ ActionController::Routing::Routes.draw do |map|
   map.welcome 'welcome', :controller => 'welcome', :action => 'index'
   
   map.resource :user_sessions
-  #map.resource :account, :controller => "users"
   map.resources :users
   map.resources :institutes
-  map.resources :types
   map.resources :specialties
 
   map.resources :studies
+  map.resources :secondary_studies, :controller => :studies
+  map.resources :tertiary_studies, :controller => :studies
+  map.resources :university_studies, :controller => :studies
+  map.resources :graduate_studies, :controller => :studies
+
   map.resources :jobs
     
-  map.register '/register/:activation_code', :controller => 'activations', :action => 'new'
-  map.activate '/activate/:id', :controller => 'activations', :action => 'create'
+  map.register    '/register/:activation_code', :controller => 'activations', :action => 'new'
+  map.activate    '/activate/:id', :controller => 'activations', :action => 'create'
+
 #  map.connect ':controller/:action/:id'
 #  map.connect ':controller/:action/:id.:format'
 end

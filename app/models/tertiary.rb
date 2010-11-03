@@ -1,0 +1,3 @@
+class Tertiary < Study
+  
+end

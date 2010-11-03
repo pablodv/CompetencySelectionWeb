@@ -1,4 +1,5 @@
 class InstitutesController < InheritedResources::Base
+  filter_access_to :all
   respond_to :html
-  filter_resource_access
+ 
 end

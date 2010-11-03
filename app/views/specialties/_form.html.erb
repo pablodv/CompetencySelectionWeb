@@ -1,7 +1,5 @@
 <%= form.label :name %> <br/>
 <%= form.text_field :name %> <br/>
-<%= form.label :institute_id %> <br/>
-<%= form.select :institute_id, Institute.all.collect {|i| [i.name, i.id]}, {:include_blank => 'Select a institute'}  %> <br/>
-<%= form.label :type %> <br/>
-<%= form.select :type, Institute::TYPE, {:include_blank => 'Select a type'}  %> <br/>
+<%= form.label :level %> <br/>
+<%= form.select :level, Institute::LEVEL, {:include_blank => 'Select a level'}  %> <br/>
 

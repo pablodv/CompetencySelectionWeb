@@ -1,0 +1,12 @@
+<%= link_to 'Add Specialty', new_specialty_path %>
+<br/>
+<br/>
+<% @specialties.each do |specialty| %>
+  <%= specialty.name %><br/>
+  <%= specialty.level %>
+  <%= link_to 'Show', specialty_path(specialty) %>
+  |
+  <%= link_to 'Edit', edit_specialty_path(specialty) %>
+  |
+  <%= link_to 'Delete', specialty, :method => :delete, :confirm => "Are you sure?" %><br/>
+<% end %>

@@ -1,6 +1,6 @@
 class Institute < ActiveRecord::Base
-  has_many :specialties
+  has_one :study
   validates_presence_of :name, :type
 
-  NIVEL = ['primary','secondary','tertiary','university','graduate']
+  LEVEL = ['primary','secondary','tertiary','university','graduate']
 end
