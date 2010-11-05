@@ -45,19 +45,6 @@ ActiveRecord::Schema.define(:version => 20101101213750) do
 # Could not dump table "specialties" because of following StandardError
 #   Unknown type 'level' for column 'type'
 
-  create_table "studies", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "institute_id"
-    t.integer  "specialty_id"
-    t.date     "start_date"
-    t.date     "end_date"
-    t.string   "state"
-    t.string   "type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "comment"
-  end
-
   create_table "types", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"

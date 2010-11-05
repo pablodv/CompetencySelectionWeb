@@ -1,2 +1,0 @@
-class Secondary < Education
-end

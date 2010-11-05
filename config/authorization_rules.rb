@@ -1,13 +1,16 @@
 authorization do
   role :admin do
-    has_permission_on [:institutes, :specialties, :roles,:users, :studies], :to => :manage
-    has_permission_on :studies, :to => [:manage, :level]
+    has_permission_on [:institutes, :specialties, :roles, :users, :educations], :to => :manage
   end
 
   role :register do
     has_permission_on :users, :to => [:show, :edit, :update] do
       if_attribute :id => is { user.id }
     end
+    has_permission_on :educations, :to => :manage do
+      if_attribute :user_id => is { user.id }
+    end
+
   end
 
   role :guest do

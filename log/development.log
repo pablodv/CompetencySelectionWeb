@@ -23967,3 +23967,631 @@ Rendering users/show
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
 Rendered shared/_navigation (120.5ms)
 Completed in 168ms (View: 125, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-11-05 07:52:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 119ms (View: 32, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-11-05 07:53:02) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"pablito"}, "action"=>"create", "authenticity_token"=>"/qTyUP1IX6kHbyCvXmXDBDr7RmVFUvClLQhi1mPrM2k=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'pablito') LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-11-05 10:53:03', "perishable_token" = 'B4UX15rgjHiGsqxBhEIw' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/welcome
+Completed in 554ms (DB: 1) | 302 Found [http://localhost/user_sessions]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 07:53:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+
+ActionView::TemplateError (undefined local variable or method `secondary_index_path' for #<ActionView::Base:0x7fdf59713dc0>) on line #11 of app/views/shared/_navigation.html.erb:
+8: <br/>
+9: <%= link_to 'Personal Information', user_path(current_user) %>
+10: |
+11: <%= link_to 'Secondary Education', secondary_index_path %>
+12: |
+13: <%= link_to 'Tertiary Education', tertiary_index_path %>
+14: |
+
+    app/views/shared/_navigation.html.erb:11
+    app/views/layouts/application.html.erb:21
+
+Rendered rescues/_trace (81.3ms)
+Rendered rescues/_request_and_response (24.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 07:54:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+
+ActionView::TemplateError (education_secondary_index_url failed to generate from {:action=>"index", :controller=>"educations"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["educations", :education_id, "secondary"] - are they all satisfied?) on line #11 of app/views/shared/_navigation.html.erb:
+8: <br/>
+9: <%= link_to 'Personal Information', user_path(current_user) %>
+10: |
+11: <%= link_to 'Secondary Education', education_secondary_index_path %>
+12: |
+13: <%= link_to 'Tertiary Education', education_tertiary_index_path %>
+14: |
+
+    (eval):21:in `education_secondary_index_path'
+    app/views/shared/_navigation.html.erb:11
+    app/views/layouts/application.html.erb:21
+
+Rendered rescues/_trace (221.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 07:58:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+
+ActionView::TemplateError (education_secondary_index_url failed to generate from {:type=>:secondary, :action=>"index", :controller=>"educations"}, expected: {:action=>"index", :controller=>"educations"}, diff: {:type=>:secondary}) on line #11 of app/views/shared/_navigation.html.erb:
+8: <br/>
+9: <%= link_to 'Personal Information', user_path(current_user) %>
+10: |
+11: <%= link_to 'Secondary Education', education_secondary_index_path(:type => :secondary) %>
+12: |
+13: <%= link_to 'Tertiary Education', education_tertiary_index_path(:type => :secondary) %>
+14: |
+
+    (eval):21:in `education_secondary_index_path'
+    app/views/shared/_navigation.html.erb:11
+    app/views/layouts/application.html.erb:21
+
+Rendered rescues/_trace (80.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 07:58:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+
+ActionView::TemplateError (education_secondary_index_url failed to generate from {:type=>:secondary, :action=>"index", :controller=>"educations"}, expected: {:action=>"index", :controller=>"educations"}, diff: {:type=>:secondary}) on line #11 of app/views/shared/_navigation.html.erb:
+8: <br/>
+9: <%= link_to 'Personal Information', user_path(current_user) %>
+10: |
+11: <%= link_to 'Secondary Education', education_secondary_index_path(:type => :secondary) %>
+12: |
+13: <%= link_to 'Tertiary Education', education_tertiary_index_path(:type => :tertiary) %>
+14: |
+
+    (eval):21:in `education_secondary_index_path'
+    app/views/shared/_navigation.html.erb:11
+    app/views/layouts/application.html.erb:21
+
+Rendered rescues/_trace (226.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 07:58:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+
+ActionView::TemplateError (education_secondary_index_url failed to generate from {:type=>:secondary, :action=>"index", :controller=>"educations"}, expected: {:action=>"index", :controller=>"educations"}, diff: {:type=>:secondary}) on line #11 of app/views/shared/_navigation.html.erb:
+8: <br/>
+9: <%= link_to 'Personal Information', user_path(current_user) %>
+10: |
+11: <%= link_to 'Secondary Education', education_secondary_index_path(:type => :secondary) %>
+12: |
+13: <%= link_to 'Tertiary Education', education_tertiary_index_path(:type => :tertiary) %>
+14: |
+
+    (eval):21:in `education_secondary_index_path'
+    app/views/shared/_navigation.html.erb:11
+    app/views/layouts/application.html.erb:21
+
+Rendered rescues/_trace (84.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-11-05 08:06:04) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"pablito"}, "action"=>"create", "authenticity_token"=>"/qTyUP1IX6kHbyCvXmXDBDr7RmVFUvClLQhi1mPrM2k=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'pablito') LIMIT 1[0m
+  [4;36;1mUser Update (0.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-11-05 11:06:04', "perishable_token" = 'nEq8bU0AdBs0ZrbStHj' WHERE "id" = 1[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/welcome
+Completed in 48ms (DB: 2) | 302 Found [http://localhost/user_sessions]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 08:06:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+
+ActionView::TemplateError (user_educations_url failed to generate from {:action=>"index", :controller=>"educations"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :user_id, "educations"] - are they all satisfied?) on line #11 of app/views/shared/_navigation.html.erb:
+8: <br/>
+9: <%= link_to 'Personal Information', user_path(current_user) %>
+10: |
+11: <%= link_to 'Education', user_educations_path %>
+12: |
+13: <%= link_to 'Jobs' %>
+
+    (eval):21:in `user_educations_path'
+    app/views/shared/_navigation.html.erb:11
+    app/views/layouts/application.html.erb:21
+
+Rendered rescues/_trace (225.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 08:06:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+
+ActionView::TemplateError (user_educations_url failed to generate from {:action=>"index", :controller=>"educations"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :user_id, "educations"] - are they all satisfied?) on line #11 of app/views/shared/_navigation.html.erb:
+8: <br/>
+9: <%= link_to 'Personal Information', user_path(current_user) %>
+10: |
+11: <%= link_to 'Education', user_educations_path %>
+12: |
+13: <%= link_to 'Jobs' %>
+
+    (eval):21:in `user_educations_path'
+    app/views/shared/_navigation.html.erb:11
+    app/views/layouts/application.html.erb:21
+
+Rendered rescues/_trace (84.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 08:06:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+
+ActionView::TemplateError (user_educations_url failed to generate from {:action=>"index", :controller=>"educations"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :user_id, "educations"] - are they all satisfied?) on line #11 of app/views/shared/_navigation.html.erb:
+8: <br/>
+9: <%= link_to 'Personal Information', user_path(current_user) %>
+10: |
+11: <%= link_to 'Education', user_educations_path %>
+12: |
+13: <%= link_to 'Jobs' %>
+
+    (eval):21:in `user_educations_path'
+    app/views/shared/_navigation.html.erb:11
+    app/views/layouts/application.html.erb:21
+
+Rendered rescues/_trace (214.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 08:07:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mRole Load (25.0ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+Rendered shared/_navigation (162.3ms)
+Completed in 203ms (View: 144, DB: 26) | 200 OK [http://localhost/welcome]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-11-05 08:07:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+Rendered shared/_navigation (6.9ms)
+Completed in 101ms (View: 59, DB: 2) | 200 OK [http://localhost/users/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-11-05 08:07:17) [GET]
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 08:08:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+
+ActionView::TemplateError (undefined method `users_user_educations_path' for #<ActionView::Base:0x7fdf5994edb0>) on line #11 of app/views/shared/_navigation.html.erb:
+8: <br/>
+9: <%= link_to 'Personal Information', user_path(current_user) %>
+10: |
+11: <%= link_to 'Education', [:users, current_user, :educations] %>
+12: |
+13: <%= link_to 'Jobs' %>
+
+    app/views/shared/_navigation.html.erb:11
+    app/views/layouts/application.html.erb:21
+
+Rendered rescues/_trace (86.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 08:08:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+
+ActionView::TemplateError (undefined method `index_user_educations_path' for #<ActionView::Base:0x7fdf59661df0>) on line #11 of app/views/shared/_navigation.html.erb:
+8: <br/>
+9: <%= link_to 'Personal Information', user_path(current_user) %>
+10: |
+11: <%= link_to 'Education', [:index, current_user, :educations] %>
+12: |
+13: <%= link_to 'Jobs' %>
+
+    app/views/shared/_navigation.html.erb:11
+    app/views/layouts/application.html.erb:21
+
+Rendered rescues/_trace (221.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 08:08:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+Rendered shared/_navigation (23.0ms)
+Completed in 68ms (View: 30, DB: 1) | 200 OK [http://localhost/welcome]
+
+
+Processing EducationsController#index (for 127.0.0.1 at 2010-11-05 08:08:57) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"1", "controller"=>"educations"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to index. Actions: current_user, current_user_session, logged_in?, login_required, and redirect_to_target_or_default):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 08:10:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+Rendered shared/_navigation (158.2ms)
+Completed in 195ms (View: 160, DB: 1) | 200 OK [http://localhost/welcome]
+
+
+Processing EducationsController#index (for 127.0.0.1 at 2010-11-05 08:10:07) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"1", "controller"=>"educations"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+Permission denied: No matching rules found for index for #<User id: 1, first_name: "Pablo", last_name: "Moreira Mora", login: "pablito", email: "pablo.moreiramora@gmail.com", crypted_password: "c0b762b1e298c173190c01eedf53645d4659ca0768db69274b7...", password_salt: "0MhfFEbbQ5azxt4shG0T", persistence_token: "f0ccef6cdb8de4a88feb4d41d10610bbfcfa0086a73af9ce12c...", single_access_token: "5X7mzDLMAxJkr4OVRKi", perishable_token: "nEq8bU0AdBs0ZrbStHj", created_at: "2010-10-21 18:53:08", updated_at: "2010-11-05 11:06:04", admin: false, active: true, dni: nil, address: nil, country_id: nil, state_id: nil, phone: nil, mobile_phone: nil, gender: nil, marital_status: nil, photo_file_name: nil, photo_content_type: nil, photo_file_size: nil, photo_updated_at: nil> (roles [:admin], privileges [:index, :manage], context :educations).
+Redirected to http://localhost:3000/welcome
+Filter chain halted as [:filter_access_filter] rendered_or_redirected.
+Completed in 55ms (DB: 1) | 302 Found [http://localhost/users/1/educations]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-11-05 08:10:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+Rendered shared/_navigation (24.6ms)
+Completed in 69ms (View: 27, DB: 1) | 200 OK [http://localhost/welcome]
+
+
+Processing EducationsController#index (for 127.0.0.1 at 2010-11-05 08:11:56) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"1", "controller"=>"educations"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+  [4;36;1mEducation Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: educations: SELECT * FROM "educations" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: educations: SELECT * FROM "educations" ):
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/base_helpers.rb:23:in `collection'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:7:in `index'
+
+Rendered rescues/_trace (63.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101009193746)
+Migrating to AddAdminToUser (20101009202119)
+Migrating to AddActiveToUser (20101009212310)
+Migrating to AddColumnToUsers (20101021174259)
+Migrating to CreateInstitutes (20101023013010)
+Migrating to CreateSpecialties (20101023013144)
+Migrating to AddComentToStudies (20101023014046)
+Migrating to CreateJobs (20101023014436)
+Migrating to AddUserToJobs (20101023015332)
+Migrating to CreateTipes (20101023020011)
+Migrating to CreateRoles (20101023184626)
+Migrating to CreateAssignments (20101023184946)
+Migrating to ChangeNameTipe (20101024003418)
+Migrating to AddColumnToUser (20101024203107)
+Migrating to AddAttachmentsPhotoToUser (20101024212141)
+Migrating to ChanceColumnInInstitutes (20101024214507)
+Migrating to ChangeTypeOnInstitute (20101027185138)
+Migrating to ChangeTypeOnSpecialty (20101027193602)
+Migrating to ChangeColumnInStudies (20101028003016)
+Migrating to ChangeLevelOnStudy (20101101213750)
+Migrating to CreateEducations (20101104230204)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE TABLE "educations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "institute_id" integer, "specialty_id" integer, "date_from" date, "date_until" date, "comment" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101104230204')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("educations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("institutes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("jobs")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("roles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("studies")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("types")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing EducationsController#index (for 127.0.0.1 at 2010-11-05 08:16:25) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"1", "controller"=>"educations"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+  [4;35;1mEducation Load (0.3ms)[0m   [0mSELECT * FROM "educations" [0m
+
+ActionView::MissingTemplate (Missing template educations/index.erb in view path app/views:/home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/declarative_authorization-0.5.1/app/views):
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+  responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:7:in `index'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101009193746)
+Migrating to AddAdminToUser (20101009202119)
+Migrating to AddActiveToUser (20101009212310)
+Migrating to AddColumnToUsers (20101021174259)
+Migrating to CreateInstitutes (20101023013010)
+Migrating to CreateSpecialties (20101023013144)
+Migrating to AddComentToStudies (20101023014046)
+Migrating to CreateJobs (20101023014436)
+Migrating to AddUserToJobs (20101023015332)
+Migrating to CreateTipes (20101023020011)
+Migrating to CreateRoles (20101023184626)
+Migrating to CreateAssignments (20101023184946)
+Migrating to ChangeNameTipe (20101024003418)
+Migrating to AddColumnToUser (20101024203107)
+Migrating to AddAttachmentsPhotoToUser (20101024212141)
+Migrating to ChanceColumnInInstitutes (20101024214507)
+Migrating to ChangeTypeOnInstitute (20101027185138)
+Migrating to ChangeTypeOnSpecialty (20101027193602)
+Migrating to ChangeColumnInStudies (20101028003016)
+Migrating to ChangeLevelOnStudy (20101101213750)
+Migrating to CreateEducations (20101104230204)
+Migrating to DropTableStudies (20101105111658)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mDROP TABLE "studies"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101105111658')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("educations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("institutes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("jobs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("roles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("types")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to DropTableStudies (20101105111658)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20101105111658'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("assignments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("educations")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("institutes")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("types")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEducations (20101104230204)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mDROP TABLE "educations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20101104230204'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("institutes")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("types")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101009193746)
+Migrating to AddAdminToUser (20101009202119)
+Migrating to AddActiveToUser (20101009212310)
+Migrating to AddColumnToUsers (20101021174259)
+Migrating to CreateInstitutes (20101023013010)
+Migrating to CreateSpecialties (20101023013144)
+Migrating to AddComentToStudies (20101023014046)
+Migrating to CreateJobs (20101023014436)
+Migrating to AddUserToJobs (20101023015332)
+Migrating to CreateTipes (20101023020011)
+Migrating to CreateRoles (20101023184626)
+Migrating to CreateAssignments (20101023184946)
+Migrating to ChangeNameTipe (20101024003418)
+Migrating to AddColumnToUser (20101024203107)
+Migrating to AddAttachmentsPhotoToUser (20101024212141)
+Migrating to ChanceColumnInInstitutes (20101024214507)
+Migrating to ChangeTypeOnInstitute (20101027185138)
+Migrating to ChangeTypeOnSpecialty (20101027193602)
+Migrating to ChangeColumnInStudies (20101028003016)
+Migrating to ChangeLevelOnStudy (20101101213750)
+Migrating to CreateEducations (20101104230204)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "educations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "institute_id" integer, "specialty_id" integer, "date_from" date, "date_until" date, "comment" text, "type_education" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101104230204')[0m
+Migrating to DropTableStudies (20101105111658)
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: no such table: studies: DROP TABLE "studies"[0m
+
+
+Processing EducationsController#index (for 127.0.0.1 at 2010-11-05 08:19:36) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"1", "controller"=>"educations"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+  [4;36;1mEducation Load (1.3ms)[0m   [0;1mSELECT * FROM "educations" [0m
+
+ActionView::MissingTemplate (Missing template educations/index.erb in view path app/views:/home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/declarative_authorization-0.5.1/app/views):
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+  responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:7:in `index'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EducationsController#index (for 127.0.0.1 at 2010-11-05 08:19:37) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"1", "controller"=>"educations"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+  [4;35;1mEducation Load (0.3ms)[0m   [0mSELECT * FROM "educations" [0m
+
+ActionView::MissingTemplate (Missing template educations/index.erb in view path app/views:/home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/declarative_authorization-0.5.1/app/views):
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+  responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:7:in `index'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EducationsController#index (for 127.0.0.1 at 2010-11-05 08:19:42) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"1", "controller"=>"educations"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 1)) [0m
+  [4;36;1mEducation Load (0.3ms)[0m   [0;1mSELECT * FROM "educations" [0m
+
+ActionView::MissingTemplate (Missing template educations/index.erb in view path app/views:/home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/declarative_authorization-0.5.1/app/views):
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+  responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@rails-2.3.8/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:7:in `index'
+
+Rendering rescues/layout (internal_server_error)
