@@ -1,2 +1,2 @@
-class Graduate < Study
+class Graduate < Education
 end

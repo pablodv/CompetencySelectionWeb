@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   acts_as_authentic
-  has_many :jobs
-  has_many :studies
+  has_many :educations
   has_many :assignments
   has_many :roles, :through => :assignments
   validates_presence_of :login, :first_name, :last_name, :email  

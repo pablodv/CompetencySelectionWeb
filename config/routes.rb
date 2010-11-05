@@ -49,11 +49,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :institutes
   map.resources :specialties
 
-  map.resources :studies
-  map.resources :secondary_studies, :controller => :studies
-  map.resources :tertiary_studies, :controller => :studies
-  map.resources :university_studies, :controller => :studies
-  map.resources :graduate_studies, :controller => :studies
+  map.resources :educations do
+    map.resources :secondary, :controller => :educations
+    map.resources :tertiary, :controller => :educations
+    map.resources :university, :controller => :educations
+    map.resources :graduate, :controller => :educations
+  end
 
   map.resources :jobs
     

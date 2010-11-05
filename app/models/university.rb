@@ -1,2 +1,2 @@
-class University < Study
+class University < Education
 end

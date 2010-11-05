@@ -1,3 +1,2 @@
-class Tertiary < Study
-  
+class Tertiary < Education
 end

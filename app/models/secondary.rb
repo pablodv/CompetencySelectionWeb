@@ -1,3 +1,2 @@
-class Secondary < Study
-  
+class Secondary < Education
 end
