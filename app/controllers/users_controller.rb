@@ -8,9 +8,8 @@ class UsersController < InheritedResources::Base
         UserSession.create(@user)
         @user.deliver_activation_instructions!
       end      
-    redirect_to login_path
-    end
-    
+      redirect_to login_path
+    end   
   end
  
 end

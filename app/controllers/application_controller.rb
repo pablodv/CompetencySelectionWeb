@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
     flash[:error] = "Sorry, you are not allowed to access that page."
     redirect_to welcome_path
   end
+  
 #  filter_parameter_logging :password, :password_confirmation
 #  helper_method :current_user_session, :current_user
 #

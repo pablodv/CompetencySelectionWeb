@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  institute_id: 1
+  specialty_id: 1
+  date_from: 2010-11-04
+  date_until: 2010-11-04
+  comment: MyText
+
+two:
+  user_id: 1
+  institute_id: 1
+  specialty_id: 1
+  date_from: 2010-11-04
+  date_until: 2010-11-04
+  comment: MyText

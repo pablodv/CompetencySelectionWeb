@@ -9,11 +9,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101101213750) do
+ActiveRecord::Schema.define(:version => 20101110020049) do
 
   create_table "assignments", :force => true do |t|
     t.integer  "user_id"
     t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.string   "website"
+    t.string   "login"
+    t.string   "cached_slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "educations", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "institute_id"
+    t.integer  "specialty_id"
+    t.date     "date_from"
+    t.date     "date_until"
+    t.text     "comment"
+    t.string   "type_education"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -29,8 +50,8 @@ ActiveRecord::Schema.define(:version => 20101101213750) do
     t.string   "company"
     t.string   "employment"
     t.text     "description"
-    t.date     "start_date"
-    t.date     "end_date"
+    t.date     "date_from"
+    t.date     "date_until"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
@@ -41,6 +62,18 @@ ActiveRecord::Schema.define(:version => 20101101213750) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "slugs", :force => true do |t|
+    t.string   "name"
+    t.integer  "sluggable_id"
+    t.integer  "sequence",                     :default => 1, :null => false
+    t.string   "sluggable_type", :limit => 40
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
+  add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
 
 # Could not dump table "specialties" because of following StandardError
 #   Unknown type 'level' for column 'type'
@@ -77,6 +110,9 @@ ActiveRecord::Schema.define(:version => 20101101213750) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.string   "cached_slug"
+    t.date     "birthday"
+    t.integer  "company_id"
   end
 
 end

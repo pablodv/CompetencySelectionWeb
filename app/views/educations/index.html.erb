@@ -1,0 +1,102 @@
+<%= link_to 'Add', new_user_education_path %><br/>
+
+<h3>Secondary Education</h3>
+<table>
+  <thead>
+    <tr>
+      <td>Institute</td>
+      <td>Specialty</td>
+      <td>Date From</td>
+      <td>Date Until</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @secondary.each do |s| %>
+      <tr>
+        <td><%= s.institute.name %></td>
+        <td><%= s.specialty.name %></td>
+        <td><%= s.date_from.strftime("%d/%m/%Y") %></td>
+        <td><%= s.date_until.strftime("%d/%m/%Y") %></td>
+        <td><%= link_to 'Edit', edit_user_education_path(current_user, s) %></td>
+        <td><%= link_to 'Delete',[current_user, s], :method => :delete, :confirm => "Are you sure?" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h3>Tertiary Education</h3>
+<table>
+  <thead>
+    <tr>
+      <td>Institute</td>
+      <td>Specialty</td>
+      <td>Date From</td>
+      <td>Date Until</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tertiary.each do |t| %>
+      <td><%= t.institute.name %></td>
+      <td><%= t.specialty.name %></td>
+      <td><%= t.date_from.strftime("%d/%m/%Y") %></td>
+      <td><%= t.date_until.strftime("%d/%m/%Y") %></td>
+      <td><%= t.comment %></td>
+      <td><%= link_to 'Edit', edit_user_education_path(current_user, t) %></td>
+      <td><%= link_to 'Delete', [current_user, t], :method => :delete, :confirm => "Are you sure?" %></td>
+    <% end %>
+  </tbody>
+</table>
+
+<h3>University Education</h3>
+<table>
+  <thead>
+    <tr>
+      <td>Institute</td>
+      <td>Specialty</td>
+      <td>Date From</td>
+      <td>Date Until</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @university.each do |u| %>
+      <td><%= u.institute.name %></td>
+      <td><%= u.specialty.name %></td>
+      <td><%= u.date_from.strftime("%d/%m/%Y") %></td>
+      <td><%= u.date_until.strftime("%d/%m/%Y") %></td>
+      <td><%= u.comment %></td>
+      <td><%= link_to 'Edit', edit_user_education_path(current_user, u) %></td>
+      <td><%= link_to 'Delete', [current_user, u], :method => :delete, :confirm => "Are you sure?" %></td>
+    <% end %>
+  </tbody>
+</table>
+
+<h3>Graduate Education</h3>
+<table>
+  <thead>
+    <tr>
+      <td>Institute</td>
+      <td>Specialty</td>
+      <td>Date From</td>
+      <td>Date Until</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @graduate.each do |g| %>
+      <td><%= g.institute.name %></td>
+      <td><%= g.specialty.name %></td>
+      <td><%= g.date_from.strftime("%d/%m/%Y") %></td>
+      <td><%= g.date_until.strftime("%d/%m/%Y") %></td>
+      <td><%= g.comment %></td>
+      <td><%= link_to 'Edit', edit_user_education_path(current_user, g) %></td>
+      <td><%= link_to 'Delete', [current_user, g], :method => :delete, :confirm => "Are you sure?" %></td>
+    <% end %>
+  </tbody>
+</table>

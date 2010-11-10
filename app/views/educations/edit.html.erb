@@ -1,0 +1,5 @@
+<% form_for [current_user, @education] do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => 'form', :object => f %>
+  <%= f.submit 'Accept' %>
+<% end %>

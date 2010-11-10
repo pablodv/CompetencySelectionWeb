@@ -43,14 +43,20 @@ ActionController::Routing::Routes.draw do |map|
   map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
   map.login 'login', :controller => 'user_sessions', :action => 'new'
   map.welcome 'welcome', :controller => 'welcome', :action => 'index'
+
+  map.respurces :companies
+  map.resources :institutes
+  map.resources :specialties
   
   map.resource :user_sessions
   map.resources :institutes
   map.resources :specialties
 
-  map.resources :users do |users|
-    users.resources :educations
-    users.resources :jobs
+  map.resources :users do |user|
+    user.resources :educations
+    user.resources :jobs
+    user.institute_type_education 'educations/institute_type_education/:type', :controller => :educations, :action => :institute_type_education
+    user.specialty_type_education 'educations/specialty_type_education/:type', :controller => :educations, :action => :specialty_type_education
   end
 
   map.register    '/register/:activation_code', :controller => 'activations', :action => 'new'

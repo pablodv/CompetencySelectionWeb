@@ -1,8 +1,13 @@
 class User < ActiveRecord::Base
   acts_as_authentic
   has_many :educations
+  has_many :jobs
   has_many :assignments
   has_many :roles, :through => :assignments
+  belongs_to :company
+
+  has_friendly_id :login, :use_slug => true
+
   validates_presence_of :login, :first_name, :last_name, :email  
 
   has_attached_file :photo, :styles => { :small => "150x150>" },
