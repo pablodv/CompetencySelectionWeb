@@ -1,0 +1,7 @@
+authlogic 	          --version 2.1.6
+has_scope 	          --version 0.5.0
+responders                --version 0.4.7
+inherited_resources       --version 1.0.6
+will_paginate 	          --version 2.3.11 --source http://gemcutter.org
+declarative_authorization                  --source http://gemcutter.org
+friendly_id               --version 3.1
