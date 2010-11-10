@@ -44,11 +44,8 @@ ActionController::Routing::Routes.draw do |map|
   map.login 'login', :controller => 'user_sessions', :action => 'new'
   map.welcome 'welcome', :controller => 'welcome', :action => 'index'
 
-  map.respurces :companies
-  map.resources :institutes
-  map.resources :specialties
-  
   map.resource :user_sessions
+  map.resources :companies
   map.resources :institutes
   map.resources :specialties
 
