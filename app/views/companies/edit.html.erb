@@ -1,0 +1,8 @@
+<% form_for current_company do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :name %><br/>
+  <%= f.text_field :name %><br/>
+  <%= f.label :website %><br/>
+  <%= f.text_field :website %><br/>
+  <%= f.submit "Update" %>
+<% end %>

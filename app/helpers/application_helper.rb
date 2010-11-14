@@ -5,4 +5,8 @@ module ApplicationHelper
     javascript_tag "jQuery(document).ready(function() { #{string} });"
   end
 
+  def current_company
+    @current_company ||= Company.find_by_id(session[:company_id])
+  end
+  
 end

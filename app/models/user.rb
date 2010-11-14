@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
   has_many :assignments
   has_many :roles, :through => :assignments
   belongs_to :company
-
+  accepts_nested_attributes_for :company
+  
   has_friendly_id :login, :use_slug => true
 
   validates_presence_of :login, :first_name, :last_name, :email  
@@ -15,8 +16,8 @@ class User < ActiveRecord::Base
                     :path => ":rails_root/public/assets/users/:id/:style/:basename.:extension"
 
 #  validates_attachment_presence :photo
-#  validates_attachment_size :photo, :less_than => 5.megabytes
-#  validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
+  validates_attachment_size :photo, :less_than => 2.megabytes
+  validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
 
   after_create :asign_role
 
@@ -31,8 +32,10 @@ class User < ActiveRecord::Base
     end
   end
 
-  def asign_role    
-    Assignment.create(:user_id => self.id, :role_id => Role.find_by_name('register').id)
+  def asign_role
+    if self.roles.blank?
+      Assignment.create(:user_id => self.id, :role_id => Role.find_by_name('admin').id)
+    end
   end
   
   def activate!

@@ -15,6 +15,7 @@
 # 
 #   before_filter :login_required, :except => [:index, :show]
 module Authentication
+  
   def self.included(controller)
     controller.send :helper_method, :current_user, :logged_in?, :redirect_to_target_or_default
     controller.filter_parameter_logging :password
@@ -25,6 +26,10 @@ module Authentication
     @current_user_session = UserSession.find
   end
 
+  def current_company
+    @current_company ||= Company.find_by_id(session[:company_id])
+  end
+  
   def current_user
     return @current_user if defined?(@current_user)
     @current_user = current_user_session && current_user_session.record
@@ -38,7 +43,7 @@ module Authentication
     unless logged_in?
       flash[:error] = "You must first log in or sign up before accessing this page."
       store_target_location
-      redirect_to login_url
+      redirect_to root_url
     end
   end
   
@@ -47,9 +52,15 @@ module Authentication
     session[:return_to] = nil
   end
   
+  def set_company_session_info(company)
+    session[:company_login] = company.login
+    session[:company_id] = company.id
+  end
+
   private
   
   def store_target_location
     session[:return_to] = request.request_uri
   end
+
 end

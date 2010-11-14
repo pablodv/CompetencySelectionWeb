@@ -20,7 +20,7 @@ authorization do
   end
 
   role :guest do
-    has_permission_on :users, :to => [:new, :create]
+    has_permission_on :users, :to => [:new, :create, :registration]
   end
 end
 

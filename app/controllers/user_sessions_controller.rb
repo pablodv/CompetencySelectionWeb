@@ -3,17 +3,16 @@ class UserSessionsController < InheritedResources::Base
   actions :new, :create, :destroy
  
   def create
-    @user_session = UserSession.new(params[:user_session])
-    if @user_session.save
-      flash[:notice] = "Login successful!"
-      redirect_to welcome_path
+    if @company = Company.find_by_login(params[:user_session][:company_login])
+      set_company_session_info(@company)
+      create!(:notice => "Login successful!") { welcome_path }
     end
   end
 
   def destroy
     current_user_session.destroy
     flash[:notice] = "Logout successful!"
-    redirect_to login_path
+    redirect_to root_path
   end
 
 end

@@ -2,13 +2,18 @@ class UsersController < InheritedResources::Base
   filter_access_to :all
   respond_to :html
 
+  def registration
+    @user = User.new
+  end
+  
   def create
-    create!(:notice => "User was successfully created. Check your email" ) do |success|
+    @user = User.new params[:user]
+    create! do |success|
       success.html do
-        UserSession.create(@user)
         @user.deliver_activation_instructions!
+        flash[:notice] = "User was successfully created. Check your email"
+        redirect_to root_url
       end      
-      redirect_to login_path
     end   
   end
  
