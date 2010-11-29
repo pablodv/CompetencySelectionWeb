@@ -1,0 +1,12 @@
+<% if permitted_to? :manage_users, :users %>
+  <%= link_to 'Company', company_path(current_company) %>
+  |
+  <%= link_to 'Users', users_path %>
+  |
+  <%= link_to 'Invite', new_user_path %>
+  |
+  <%= link_to 'Institutes', institutes_path %>
+  |
+  <%= link_to 'Specialties', specialties_path %>
+<% end %>
+<br/>

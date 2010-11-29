@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   include Authentication
   helper :all
   protect_from_forgery
-  before_filter { |c| Authorization.current_user = c.current_user }
+  before_filter { |u| Authorization.current_user = u.current_user }
 
   protected
 

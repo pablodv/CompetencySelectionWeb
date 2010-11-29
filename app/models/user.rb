@@ -31,10 +31,12 @@ class User < ActiveRecord::Base
       role.name.underscore.to_sym
     end
   end
-
+  
   def asign_role
-    if self.roles.blank?
+    if self.company.users.count == 1
       Assignment.create(:user_id => self.id, :role_id => Role.find_by_name('admin').id)
+    else
+      Assignment.create(:user_id => self.id, :role_id => Role.find_by_name('register').id)
     end
   end
   

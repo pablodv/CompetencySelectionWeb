@@ -1,0 +1,15 @@
+Hi <%= @user.first_name + " " + @user.last_name %>
+
+You have been invited  to be part of
+the <%= @inviter.name %> time tracking experience on Tit!
+Click the url below to activate your account!
+
+<%= @account_activation_url %>
+
+Use this password to login: <%= @user.password %>
+
+Remember you can change it anytime!
+
+Cheers,
+
+The system! Team.

@@ -25,4 +25,12 @@ class Notifier < ActionMailer::Base
     body          :root_url => root_url
   end
 
+  def invitation(inviter, user)
+    subject    'You have been invited to system'
+    from       "Blog <noreply@holidayreminder.com>"
+    recipients  user.email
+    sent_on     Time.now
+    body       :inviter => inviter, :user => user, :account_activation_url => register_url(user.perishable_token)
+  end
+
 end

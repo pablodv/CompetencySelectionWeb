@@ -1,5 +1,7 @@
 class Company < ActiveRecord::Base
   has_many :users
+  has_many :institutes
+  has_many :specialties
 
   validates_uniqueness_of :name, :login
   

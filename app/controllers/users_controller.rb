@@ -3,18 +3,27 @@ class UsersController < InheritedResources::Base
   respond_to :html
 
   def registration
-    @user = User.new
+    new!
   end
-  
+
   def create
-    @user = User.new params[:user]
     create! do |success|
       success.html do
-        @user.deliver_activation_instructions!
-        flash[:notice] = "User was successfully created. Check your email"
-        redirect_to root_url
-      end      
-    end   
+        if params[:commit] == "Register"
+          @user.deliver_activation_instructions!
+          flash[:notice] = "User was successfully created. Check your email."
+          redirect_to root_url
+        else
+          flash[:notice] = "User was successfully created"
+          redirect_to welcome_path
+        end
+      end
+    end
   end
- 
+
+protected
+
+  def begin_of_association_chain
+    current_company
+  end
 end

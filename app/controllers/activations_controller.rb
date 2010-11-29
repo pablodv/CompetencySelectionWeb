@@ -7,7 +7,6 @@ class ActivationsController < ApplicationController
 
     def create
       @user = User.find(params[:id])
-      Rails.logger.debug "#{@user.inspect}"
       if !@user.active
         if @user.activate!
           @user.deliver_activation_confirmation!

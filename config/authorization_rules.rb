@@ -1,7 +1,8 @@
 authorization do
   role :admin do
-    has_permission_on [:institutes, :specialties, :roles, :users, :jobs], :to => :manage
+    has_permission_on [:institutes, :specialties, :roles, :jobs], :to => :manage
     has_permission_on :educations, :to => :manage_educations
+    has_permission_on :users, :to => :manage_users
   end
 
   role :register do
@@ -31,5 +32,9 @@ privileges do
   
   privilege :manage_educations do
     includes :index, :show, :new, :create, :edit, :update, :destroy, :institute_type_education, :specialty_type_education
+  end
+
+  privilege :manage_users do
+    includes :index, :show, :new, :create, :edit, :update, :destroy
   end
 end
