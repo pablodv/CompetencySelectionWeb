@@ -1,0 +1,6 @@
+log/*
+.rvmrc
+config/database.yml
+nbproject/*
+db/schema.rb
+db/*.sqlite3

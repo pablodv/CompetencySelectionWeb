@@ -41339,3 +41339,836 @@ Rendering welcome/index
 Rendered shared/_admin_navigation (179.3ms)
 Rendered shared/_navigation (181.4ms)
 Completed in 232ms (View: 168, DB: 19) | 200 OK [http://localhost/welcome]
+/!\ FAILSAFE /!\  Sun Dec 05 19:30:21 -0300 2010
+  Status: 500 Internal Server Error
+  no such file to load -- sqlite3
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:156:in `require'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:156:in `require'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activesupport-2.3.8/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activesupport-2.3.8/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activesupport-2.3.8/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/sqlite3_adapter.rb:10:in `sqlite3_connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rails-2.3.8/lib/commands/server.rb:111
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Sun Dec 05 19:30:33 -0300 2010
+  Status: 500 Internal Server Error
+  no such file to load -- sqlite3
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:156:in `require'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:156:in `require'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activesupport-2.3.8/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activesupport-2.3.8/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activesupport-2.3.8/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/sqlite3_adapter.rb:10:in `sqlite3_connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/rails-2.3.8/lib/commands/server.rb:111
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-12-05 19:34:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 146ms (View: 115, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-12-05 19:34:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 51ms (View: 25, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-12-05 19:34:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 34ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-12-06 20:21:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 236ms (View: 116, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#registration (for 127.0.0.1 at 2010-12-06 20:21:16) [GET]
+  Parameters: {"action"=>"registration", "controller"=>"users"}
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/registration
+Rendered users/_form (10.7ms)
+Completed in 160ms (View: 137, DB: 0) | 200 OK [http://localhost/registration]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-12-06 20:21:31) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "authenticity_token"=>"x7Wj2fTmAo0MRDbvbQe+OnoOUySzxn4AaX77xCPmPXk=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "company_attributes"=>{"name"=>"", "login"=>""}, "last_name"=>"", "password"=>"[FILTERED]", "login"=>"", "email"=>"", "first_name"=>""}}
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '410348b883cb27ce1aae8de856b5a5f01b35d3f9eab8cb952586e64d97d852f20d40ccd58fc5adad6aad1aaa2b6c59fcbbb594252acb8b10fea590501749a200') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'pjCRdbkDkoxEw7FOzjk') LIMIT 1[0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."name" = '') LIMIT 1[0m
+  [4;35;1mCompany Load (0.2ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."login" = '') LIMIT 1[0m
+  [4;36;1mCompany Create (0.6ms)[0m   [0;1mINSERT INTO "companies" ("name", "created_at", "updated_at", "website", "cached_slug", "login") VALUES('', '2010-12-06 23:21:31', '2010-12-06 23:21:31', NULL, NULL, '')[0m
+  [4;35;1mSlug Load (0.3ms)[0m   [0mSELECT * FROM "slugs" WHERE ("slugs".sluggable_id = NULL AND "slugs".sluggable_type = 'Company') ORDER BY id DESC[0m
+
+FriendlyId::BlankError (slug.name can not be blank.):
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/friendly_id-3.1.8/lib/friendly_id/active_record_adapter/slug.rb:44:in `validate_name'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/will_paginate-2.3.15/lib/will_paginate/finder.rb:168:in `method_missing'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/will_paginate-2.3.15/lib/will_paginate/finder.rb:168:in `method_missing'
+  authlogic (2.1.6) lib/authlogic/acts_as_authentic/session_maintenance.rb:73:in `save_without_session_maintenance'
+  authlogic (2.1.6) lib/authlogic/acts_as_authentic/perishable_token.rb:94:in `reset_perishable_token!'
+  app/models/user.rb:54:in `deliver_activation_instructions!'
+  app/controllers/users_controller.rb:13:in `create'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+  responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/base_helpers.rb:247:in `respond_with_dual_blocks'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:37:in `create!'
+  app/controllers/users_controller.rb:10:in `create'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (116.0ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#registration (for 127.0.0.1 at 2010-12-06 20:24:54) [GET]
+  Parameters: {"action"=>"registration", "controller"=>"users"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/registration
+Rendered users/_form (7.4ms)
+Completed in 44ms (View: 20, DB: 0) | 200 OK [http://localhost/registration]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-12-06 20:24:56) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "authenticity_token"=>"x7Wj2fTmAo0MRDbvbQe+OnoOUySzxn4AaX77xCPmPXk=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "company_attributes"=>{"name"=>"", "login"=>""}, "last_name"=>"", "password"=>"[FILTERED]", "login"=>"", "email"=>"", "first_name"=>""}}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '4383216ad405297e1f22e9d886396a1adbf0a15c51d0a8c0c53c0d472c2748bce1214c9ac46010f8258ba8429aeb391672aad31834ff3e0728c913daea9b3cd0') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Uhp5J77y1PomaRRl81A') LIMIT 1[0m
+  [4;36;1mCompany Load (0.2ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."name" = '') LIMIT 1[0m
+  [4;35;1mCompany Load (0.2ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."login" = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (27.3ms)
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+  app/controllers/users_controller.rb:22:in `create'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+  responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/base_helpers.rb:238:in `respond_with_dual_blocks'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:37:in `create!'
+  app/controllers/users_controller.rb:10:in `create'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (157.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-12-06 20:26:03) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "authenticity_token"=>"x7Wj2fTmAo0MRDbvbQe+OnoOUySzxn4AaX77xCPmPXk=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "company_attributes"=>{"name"=>"", "login"=>""}, "last_name"=>"", "password"=>"[FILTERED]", "login"=>"", "email"=>"", "first_name"=>""}}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '15263d49dad9199f1e7b94e21c41f93f89bedb2f8d1059b3b2109d4bd6382a2c7a7537afaa60f8ca8c97626703645a6206f1099a2423e2805ede798f9df2985f') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'MuiQHFdboEiPZQKOdcB') LIMIT 1[0m
+  [4;36;1mCompany Load (0.2ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."name" = '') LIMIT 1[0m
+  [4;35;1mCompany Load (0.2ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."login" = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (25.2ms)
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+  app/controllers/users_controller.rb:21:in `create'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+  responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/base_helpers.rb:238:in `respond_with_dual_blocks'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:37:in `create!'
+  app/controllers/users_controller.rb:10:in `create'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#registration (for 127.0.0.1 at 2010-12-06 20:26:06) [GET]
+  Parameters: {"action"=>"registration", "controller"=>"users"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/registration
+Rendered users/_form (7.9ms)
+Completed in 45ms (View: 21, DB: 0) | 200 OK [http://localhost/registration]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-12-06 20:26:08) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "authenticity_token"=>"x7Wj2fTmAo0MRDbvbQe+OnoOUySzxn4AaX77xCPmPXk=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "company_attributes"=>{"name"=>"", "login"=>""}, "last_name"=>"", "password"=>"[FILTERED]", "login"=>"", "email"=>"", "first_name"=>""}}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '61759f62ed5d5cb91b0b3fffaf1bf6b3788614c6415864aedf33bc8ab73bc8710c1b33228e66b54ded6717d03a718aeca3284b6c493040f7b7eb4af239f807c1') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'QPemApulA0wUsx5iZad3') LIMIT 1[0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."name" = '') LIMIT 1[0m
+  [4;35;1mCompany Load (0.2ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."login" = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (27.0ms)
+
+ActionController::DoubleRenderError (Can only render or redirect once per action):
+  app/controllers/users_controller.rb:21:in `create'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+  responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/base_helpers.rb:238:in `respond_with_dual_blocks'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:37:in `create!'
+  app/controllers/users_controller.rb:10:in `create'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (159.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#registration (for 127.0.0.1 at 2010-12-06 20:38:58) [GET]
+  Parameters: {"action"=>"registration", "controller"=>"users"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/registration
+Rendered users/_form (8.5ms)
+Completed in 156ms (View: 22, DB: 0) | 200 OK [http://localhost/registration]
+
+
+Processing UsersController#registration (for 127.0.0.1 at 2010-12-06 20:38:59) [GET]
+  Parameters: {"action"=>"registration", "controller"=>"users"}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/registration
+Rendered users/_form (20.9ms)
+Completed in 148ms (View: 124, DB: 0) | 200 OK [http://localhost/registration]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-12-06 20:39:01) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "authenticity_token"=>"x7Wj2fTmAo0MRDbvbQe+OnoOUySzxn4AaX77xCPmPXk=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "company_attributes"=>{"name"=>"", "login"=>""}, "last_name"=>"", "password"=>"[FILTERED]", "login"=>"", "email"=>"", "first_name"=>""}}
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (4.9ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '16d72faf84e04bdee9517e4665aaa9401ec991920afcf3b4d9a9e8f9e92e6d2d0d22476549d8cf70858ec482decd1ffd9a571aee88d2a44057b59f6087c2b996') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'oGyLV7fTv3tV8FhUqOtY') LIMIT 1[0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."name" = '') LIMIT 1[0m
+  [4;35;1mCompany Load (0.2ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."login" = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/registration
+Rendered users/_form (27.8ms)
+Completed in 204ms (View: 50, DB: 7) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-12-08 19:20:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 283ms (View: 116, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-12-08 19:20:38) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"login", "company_login"=>"company login"}, "action"=>"create", "authenticity_token"=>"XQWVakZXwZ1zBSsaeVwNEcoCSJiv3tmZAGH8VzbUsDM=", "controller"=>"user_sessions"}
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."login" = 'company login') LIMIT 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'login') LIMIT 1[0m
+  [4;36;1mSlug Load (0.5ms)[0m   [0;1mSELECT * FROM "slugs" WHERE ("slugs".sluggable_id = 31 AND "slugs".sluggable_type = 'User') ORDER BY id DESC LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-12-08 22:20:38', "perishable_token" = 'vtAHSTx60U5SY8MnMht' WHERE "id" = 31[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/welcome
+Completed in 558ms (DB: 0) | 302 Found [http://localhost/user_sessions]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-12-08 19:20:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (169.8ms)
+Rendered shared/_navigation (177.4ms)
+Completed in 236ms (View: 192, DB: 2) | 200 OK [http://localhost/welcome]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-12-08 19:20:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (7.1ms)
+Rendered shared/_admin_navigation (1.5ms)
+Rendered shared/_navigation (3.1ms)
+Completed in 79ms (View: 27, DB: 2) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-12-08 19:21:05) [POST]
+  Parameters: {"commit"=>"Invite", "action"=>"create", "authenticity_token"=>"XQWVakZXwZ1zBSsaeVwNEcoCSJiv3tmZAGH8VzbUsDM=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "last_name"=>"yo", "password"=>"[FILTERED]", "login"=>"yo", "email"=>"yo@yo.com", "first_name"=>"yo"}}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mCompany Load (0.5ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'yo@yo.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'yo') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'b0671da417992bf8a37f74b95f02b66ca2df913c2ab8f2d6987eb3538cfb736789e87f74d7b94cd68ea221208c7eb5937cff2ae71db21ce09c7416ce236ef52b') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Q5g7BsBRx3QUwCyfsCMt') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/registration
+  [4;35;1mCompany Load (0.5ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) [0m
+Rendered users/_form (13.8ms)
+Rendered shared/_admin_navigation (1.6ms)
+Rendered shared/_navigation (3.2ms)
+Completed in 95ms (View: 30, DB: 3) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-12-08 19:21:22) [POST]
+  Parameters: {"commit"=>"Register", "action"=>"create", "authenticity_token"=>"XQWVakZXwZ1zBSsaeVwNEcoCSJiv3tmZAGH8VzbUsDM=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "company_attributes"=>{"name"=>"company name", "login"=>"company login"}, "last_name"=>"yo", "password"=>"[FILTERED]", "login"=>"yop", "email"=>"yo@yo.com", "first_name"=>"yo"}}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'yo@yo.com') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'yop') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '37b1d2e84dedc99dc0bf5c21cbd411bac0e8b0f7a8acebd00fcff42654973901a21c52ec0e2b00a4e7027d49a278ca38d35b934bf374ff86ffafb20925bc5468') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'OJBvoZrS7lzoT4o0BxP') LIMIT 1[0m
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."name" = 'company name') LIMIT 1[0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."login" = 'company login') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/registration
+Rendered users/_form (13.4ms)
+Rendered shared/_admin_navigation (1.6ms)
+Rendered shared/_navigation (3.4ms)
+Completed in 219ms (View: 28, DB: 3) | 200 OK [http://localhost/users]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-12-08 19:21:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (171.4ms)
+Rendered shared/_navigation (173.3ms)
+Completed in 220ms (View: 181, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-12-08 19:21:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (5.5ms)
+Rendered shared/_admin_navigation (1.6ms)
+Rendered shared/_navigation (3.4ms)
+Completed in 97ms (View: 23, DB: 2) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-12-08 19:22:07) [POST]
+  Parameters: {"commit"=>"Invite", "action"=>"create", "authenticity_token"=>"XQWVakZXwZ1zBSsaeVwNEcoCSJiv3tmZAGH8VzbUsDM=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "last_name"=>"yo", "password"=>"[FILTERED]", "login"=>"yop", "email"=>"yo@yo.com", "first_name"=>"yo"}}
+  [4;35;1mUser Load (6.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;35;1mCompany Load (0.6ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'yo@yo.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'yop') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '6691413948a735221233ae414b8873dfbc896ff7b9860acf03a5aff6d4b9807a501acc73b59ff73a9c60a729a78b5db722b013fe80ff8ac2241929cd975126a6') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Ug05RbmvH8FaKoiszBa') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mUser Create (0.5ms)[0m   [0mINSERT INTO "users" ("address", "single_access_token", "created_at", "photo_file_size", "crypted_password", "perishable_token", "updated_at", "photo_file_name", "admin", "country_id", "photo_content_type", "gender", "password_salt", "photo_updated_at", "last_name", "persistence_token", "phone", "birthday", "company_id", "cached_slug", "login", "dni", "state_id", "marital_status", "first_name", "email", "active", "mobile_phone") VALUES(NULL, 'Ug05RbmvH8FaKoiszBa', '2010-12-08 22:22:08', NULL, '9f986fa1f94e4142d2e55bed1830463503059e5f54200f4bbebbd9aa84e20e505731c7a95f6b2725da02828215e5f588ad73eb10aeb39b43cd4ca824413a7ca8', '4UvltHCLapiXW3BeHuJm', '2010-12-08 22:22:08', NULL, 'f', NULL, NULL, NULL, 'yC3nCpe6VvaYW0hQuBz', NULL, 'yo', '6691413948a735221233ae414b8873dfbc896ff7b9860acf03a5aff6d4b9807a501acc73b59ff73a9c60a729a78b5db722b013fe80ff8ac2241929cd975126a6', NULL, NULL, 20, NULL, 'yop', NULL, NULL, NULL, 'yo', 'yo@yo.com', 'f', NULL)[0m
+  [4;36;1mSlug Load (0.3ms)[0m   [0;1mSELECT * FROM "slugs" WHERE ("slugs".sluggable_id = NULL AND "slugs".sluggable_type = 'User') ORDER BY id DESC[0m
+  [4;35;1mSlug Load (0.3ms)[0m   [0mSELECT * FROM "slugs" WHERE ("slugs"."scope" IS NULL AND "slugs"."name" = 'yop') AND ("slugs".sluggable_id = NULL AND "slugs".sluggable_type = 'User') ORDER BY id DESC[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "slugs" WHERE ("slugs"."scope" IS NULL AND "slugs"."name" = 'yop' AND "slugs"."sluggable_type" = 'User') [0m
+  [4;35;1mSlug Create (0.4ms)[0m   [0mINSERT INTO "slugs" ("name", "scope", "sequence", "created_at", "sluggable_type", "sluggable_id") VALUES('yop', NULL, 1, '2010-12-08 22:22:08', 'User', 32)[0m
+  [4;36;1mCompany Load (0.3ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" WHERE ("users".company_id = 20) [0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'register') LIMIT 1[0m
+  [4;35;1mAssignment Create (0.3ms)[0m   [0mINSERT INTO "assignments" ("created_at", "updated_at", "role_id", "user_id") VALUES('2010-12-08 22:22:08', '2010-12-08 22:22:08', 2, 32)[0m
+  [4;36;1mSlug Load (0.4ms)[0m   [0;1mSELECT * FROM "slugs" WHERE ("slugs".sluggable_id = 32 AND "slugs".sluggable_type = 'User') ORDER BY id DESC LIMIT 1[0m
+  [4;35;1mUser Update (0.5ms)[0m   [0mUPDATE "users" SET "persistence_token" = '6691413948a735221233ae414b8873dfbc896ff7b9860acf03a5aff6d4b9807a501acc73b59ff73a9c60a729a78b5db722b013fe80ff8ac2241929cd975126a6', "updated_at" = '2010-12-08 22:22:08', "created_at" = '2010-12-08 22:22:08', "email" = 'yo@yo.com', "perishable_token" = '4UvltHCLapiXW3BeHuJm', "login" = 'yop', "cached_slug" = 'yop', "single_access_token" = 'Ug05RbmvH8FaKoiszBa', "company_id" = 20, "last_name" = 'yo', "first_name" = 'yo', "password_salt" = 'yC3nCpe6VvaYW0hQuBz', "crypted_password" = '9f986fa1f94e4142d2e55bed1830463503059e5f54200f4bbebbd9aa84e20e505731c7a95f6b2725da02828215e5f588ad73eb10aeb39b43cd4ca824413a7ca8' WHERE "id" = 32[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/welcome
+Completed in 242ms (DB: 13) | 302 Found [http://localhost/users]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-12-08 19:22:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (35.9ms)
+Rendered shared/_navigation (37.8ms)
+Completed in 214ms (View: 41, DB: 2) | 200 OK [http://localhost/welcome]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-12-08 19:26:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;35;1mCompany Load (0.5ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (5.3ms)
+Rendered shared/_admin_navigation (1.6ms)
+Rendered shared/_navigation (3.3ms)
+Completed in 188ms (View: 16, DB: 2) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-12-08 19:26:05) [POST]
+  Parameters: {"commit"=>"Invite", "action"=>"create", "authenticity_token"=>"XQWVakZXwZ1zBSsaeVwNEcoCSJiv3tmZAGH8VzbUsDM=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "last_name"=>"", "password"=>"[FILTERED]", "login"=>"", "email"=>"", "first_name"=>""}}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mCompany Load (0.6ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'ebc1ca5563c53f9e5009c6765069643e9391e61490efb20d574d41fb2575a561317b6f07b91bd716c597b830fdd3f5c69ebd76723991f5cc12dba64115200466') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'V0ZlVsnvENzak7UJa3eC') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/registration
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) [0m
+Rendered users/_form (32.9ms)
+Rendered shared/_admin_navigation (1.8ms)
+Rendered shared/_navigation (3.6ms)
+Completed in 261ms (View: 61, DB: 3) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-12-08 19:29:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (5.7ms)
+Rendered shared/_admin_navigation (1.7ms)
+Rendered shared/_navigation (3.6ms)
+Completed in 208ms (View: 16, DB: 2) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-12-08 19:29:15) [POST]
+  Parameters: {"commit"=>"Invite", "action"=>"create", "authenticity_token"=>"XQWVakZXwZ1zBSsaeVwNEcoCSJiv3tmZAGH8VzbUsDM=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "last_name"=>"", "password"=>"[FILTERED]", "login"=>"", "email"=>"", "first_name"=>""}}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'c8200492417a2d091d11c0586fac91b669704b01cc72d5e9f5415704b7a83edc2e5306d1804f5d24ab0708de390d14aaab404a7dc22163d5532b5120a94c1910') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'Wxz6z6OV2wlxvktj1nwa') LIMIT 1[0m
+
+NameError (undefined local variable or method `f' for #<UsersController:0x7f5b0fb49648>):
+  app/controllers/users_controller.rb:22:in `create'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+  responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/base_helpers.rb:238:in `respond_with_dual_blocks'
+  /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:37:in `create!'
+  app/controllers/users_controller.rb:10:in `create'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.6ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-12-08 19:29:36) [POST]
+  Parameters: {"commit"=>"Invite", "action"=>"create", "authenticity_token"=>"XQWVakZXwZ1zBSsaeVwNEcoCSJiv3tmZAGH8VzbUsDM=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "last_name"=>"", "password"=>"[FILTERED]", "login"=>"", "email"=>"", "first_name"=>""}}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = 'f7cafdb441859d663998265712c98b35212b0ef4507705f3d9c683bda95cea0c2ecaa30d319a6aae79218562f45152d70f71d76c513d7eb473dc01de4f0e6857') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = '13xcU72xVAeCiuDd6iRZ') LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `label' for nil:NilClass) on line #9 of app/views/users/_form.html.erb:
+6:     <%= company_form.text_field :login %><br/>
+7:   <% end %>
+8: <% end %>
+9: <%= form.label :first_name %><br />
+10: <%= form.text_field :first_name %><br />
+11: <%= form.label :last_name %><br />
+12: <%= form.text_field :last_name %><br />
+
+    app/views/users/_form.html.erb:9
+    app/controllers/users_controller.rb:22:in `create'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/base_helpers.rb:238:in `respond_with_dual_blocks'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:37:in `create!'
+    app/controllers/users_controller.rb:10:in `create'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (197.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-12-08 19:31:51) [POST]
+  Parameters: {"commit"=>"Invite", "action"=>"create", "authenticity_token"=>"XQWVakZXwZ1zBSsaeVwNEcoCSJiv3tmZAGH8VzbUsDM=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "last_name"=>"", "password"=>"[FILTERED]", "login"=>"", "email"=>"", "first_name"=>""}}
+
+SyntaxError (/home/pablo/apps/CompetencySelectionWeb/app/controllers/users_controller.rb:36: syntax error, unexpected $end, expecting kEND):
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (196.1ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-12-08 19:31:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+
+SyntaxError (/home/pablo/apps/CompetencySelectionWeb/app/controllers/users_controller.rb:36: syntax error, unexpected $end, expecting kEND):
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-12-08 19:32:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (4.7ms)
+Rendered shared/_admin_navigation (1.6ms)
+Rendered shared/_navigation (3.2ms)
+Completed in 67ms (View: 15, DB: 2) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-12-08 19:32:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (5.0ms)
+Rendered shared/_admin_navigation (1.5ms)
+Rendered shared/_navigation (3.0ms)
+Completed in 67ms (View: 14, DB: 2) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-12-08 19:32:17) [POST]
+  Parameters: {"commit"=>"Invite", "action"=>"create", "authenticity_token"=>"XQWVakZXwZ1zBSsaeVwNEcoCSJiv3tmZAGH8VzbUsDM=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "last_name"=>"", "password"=>"[FILTERED]", "login"=>"", "email"=>"", "first_name"=>""}}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;35;1mCompany Load (0.5ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = '') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = '') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '39bb3943921f33daa2f7ad48c1db362b3b293cf090ff7b742518dcfc9cd2a7d2e70f558633ee48099d9d6ebce1131726631c1143bcb21452914c8f9cbb812a13') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'gGR5fO1ZqfdmhC4i9mIQ') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (28.3ms)
+Rendered shared/_admin_navigation (1.8ms)
+Rendered shared/_navigation (3.6ms)
+Completed in 244ms (View: 180, DB: 3) | 200 OK [http://localhost/users]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-12-08 19:32:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (175.4ms)
+Rendered shared/_navigation (177.5ms)
+Completed in 221ms (View: 180, DB: 2) | 200 OK [http://localhost/welcome]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-12-08 19:32:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"company-name", "controller"=>"companies"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mCompany Load (0.5ms)[0m   [0;1mSELECT * FROM "companies" WHERE (companies.cached_slug = 'company-name') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (23.1ms)
+Rendered shared/_navigation (25.1ms)
+Completed in 226ms (View: 41, DB: 2) | 200 OK [http://localhost/companies/company-name]
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-12-08 19:32:45) [GET]
+  Parameters: {"action"=>"edit", "id"=>"company-name", "controller"=>"companies"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mCompany Load (0.5ms)[0m   [0;1mSELECT * FROM "companies" WHERE (companies.cached_slug = 'company-name') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering companies/edit
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (21.9ms)
+Rendered shared/_navigation (23.8ms)
+Completed in 91ms (View: 43, DB: 2) | 200 OK [http://localhost/companies/company-name/edit]
+
+
+Processing CompaniesController#update (for 127.0.0.1 at 2010-12-08 19:32:47) [PUT]
+  Parameters: {"company"=>{"name"=>"company name", "website"=>""}, "commit"=>"Update", "action"=>"update", "_method"=>"put", "authenticity_token"=>"XQWVakZXwZ1zBSsaeVwNEcoCSJiv3tmZAGH8VzbUsDM=", "id"=>"company-name", "controller"=>"companies"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE (companies.cached_slug = 'company-name') LIMIT 1[0m
+  [4;35;1mCompany Load (0.3ms)[0m   [0mSELECT "companies".id FROM "companies" WHERE ("companies"."name" = 'company name' AND "companies".id <> 20) LIMIT 1[0m
+  [4;36;1mCompany Load (0.2ms)[0m   [0;1mSELECT "companies".id FROM "companies" WHERE ("companies"."login" = 'company login' AND "companies".id <> 20) LIMIT 1[0m
+  [4;35;1mSlug Load (0.5ms)[0m   [0mSELECT * FROM "slugs" WHERE ("slugs".sluggable_id = 20 AND "slugs".sluggable_type = 'Company') ORDER BY id DESC LIMIT 1[0m
+  [4;36;1mCompany Update (0.4ms)[0m   [0;1mUPDATE "companies" SET "website" = '', "updated_at" = '2010-12-08 22:32:48' WHERE "id" = 20[0m
+  [4;35;1mCompany Load (1.1ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Redirected to http://localhost:3000/companies/company-name
+Completed in 156ms (DB: 0) | 302 Found [http://localhost/companies/company-name]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-12-08 19:32:48) [GET]
+  Parameters: {"action"=>"show", "id"=>"company-name", "controller"=>"companies"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE (companies.cached_slug = 'company-name') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering companies/show
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (21.7ms)
+Rendered shared/_navigation (23.6ms)
+Completed in 80ms (View: 32, DB: 2) | 200 OK [http://localhost/companies/company-name]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-12-08 19:32:50) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 38ms (DB: 1) | 302 Found [http://localhost/logout]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-12-08 19:32:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 38ms (View: 9, DB: 0) | 200 OK [http://localhost/]
