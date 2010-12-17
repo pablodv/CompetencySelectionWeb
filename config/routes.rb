@@ -45,7 +45,11 @@ ActionController::Routing::Routes.draw do |map|
   map.welcome 'welcome', :controller => 'welcome', :action => 'index'
 
   map.resource :user_sessions
-  map.resources :companies
+  map.resources :companies do |company|
+    company.resources :competencies do |competency|
+      competency.resources :items
+    end
+  end
   map.resources :institutes
   map.resources :specialties
 

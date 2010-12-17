@@ -1,0 +1,5 @@
+<% if permitted_to? :manage, :competencies %>
+  <%= link_to "Competencies", company_competencies_path(current_company) %>
+<% end %>
+<br/>
+

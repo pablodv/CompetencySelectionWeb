@@ -1,0 +1,26 @@
+<h3>Competencies</h3>
+<%= link_to "New Competency", new_company_competency_path(current_company)%>
+<table>
+  <thead>
+    <tr>
+      <td>Competency</td>
+      <td>Description</td>
+      <td>Weighted</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @competencies.each do |c| %>
+      <tr>
+        <td><%= c.name %></td>
+        <td><%= c.description %></td>
+        <td><%= c.weighted %></td>
+        <td><%= link_to 'View Items', company_competency_items_path(current_company, c)%> </td>
+        <td><%= link_to 'Edit', edit_company_competency_path(current_company, c) %></td>
+        <td><%= link_to 'Delete',[current_company, c], :method => :delete, :confirm => "Are you sure?" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

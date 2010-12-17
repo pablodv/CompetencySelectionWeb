@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  description: MyText
+  weighted: 9.99
+  competency_id: 1
+
+two:
+  description: MyText
+  weighted: 9.99
+  competency_id: 1
