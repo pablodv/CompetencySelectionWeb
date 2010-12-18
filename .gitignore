@@ -1,4 +1,5 @@
 log/*
+log/development.log
 .rvmrc
 config/database.yml
 nbproject/*

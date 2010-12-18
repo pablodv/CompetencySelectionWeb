@@ -45973,3 +45973,10 @@ Rendered shared/_admin_navigation (118.3ms)
 Rendered shared/_competencies (1.0ms)
 Rendered shared/_navigation (122.1ms)
 Completed in 188ms (View: 132, DB: 2) | 200 OK [http://localhost/companies/company-name/competencies]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-12-17 21:26:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 573ms (View: 203, DB: 0) | 200 OK [http://localhost/]
