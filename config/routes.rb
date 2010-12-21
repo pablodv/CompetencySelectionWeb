@@ -46,6 +46,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource :user_sessions
   map.resources :companies do |company|
+    company.resources :evaluations
     company.resources :competencies do |competency|
       competency.resources :items
     end

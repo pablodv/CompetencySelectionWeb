@@ -1,4 +1,5 @@
 class Competency < ActiveRecord::Base
+  has_and_belongs_to_many :evaluations
   has_many :items
   belongs_to :company
 
