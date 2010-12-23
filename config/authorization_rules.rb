@@ -20,6 +20,10 @@ authorization do
 
   end
 
+  role :human_resource do
+    has_permission_on :vacancies, :to => :manage
+  end
+  
   role :guest do
     has_permission_on :users, :to => [:new, :create, :registration]
   end

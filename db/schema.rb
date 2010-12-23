@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101221020221) do
+ActiveRecord::Schema.define(:version => 20101223231354) do
 
   create_table "assignments", :force => true do |t|
     t.integer  "user_id"
@@ -46,18 +46,6 @@ ActiveRecord::Schema.define(:version => 20101221020221) do
     t.string   "type_education"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "evaluations", :force => true do |t|
-    t.text     "description"
-    t.integer  "company_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "evaluations_competencies", :id => false, :force => true do |t|
-    t.integer "evaluation_id"
-    t.integer "competency_id"
   end
 
   create_table "institutes", :force => true do |t|
@@ -143,6 +131,17 @@ ActiveRecord::Schema.define(:version => 20101221020221) do
     t.string   "cached_slug"
     t.date     "birthday"
     t.integer  "company_id"
+  end
+
+  create_table "vacancies", :force => true do |t|
+    t.integer  "company_id"
+    t.integer  "job_id"
+    t.integer  "area_id"
+    t.decimal  "remuneration"
+    t.date     "datevacancy_date"
+    t.text     "concerns"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

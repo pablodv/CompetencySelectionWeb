@@ -46227,3 +46227,479 @@ Migrating to EvaluationsCompetencies (20101221020221)
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_slugs_on_sluggable_id')[0m
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("types")[0m
   [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (7.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101009193746)
+Migrating to AddAdminToUser (20101009202119)
+Migrating to AddActiveToUser (20101009212310)
+Migrating to AddColumnToUsers (20101021174259)
+Migrating to CreateInstitutes (20101023013010)
+Migrating to CreateSpecialties (20101023013144)
+Migrating to CreateJobs (20101023014436)
+Migrating to AddUserToJobs (20101023015332)
+Migrating to CreateRoles (20101023184626)
+Migrating to CreateAssignments (20101023184946)
+Migrating to AddColumnToUser (20101024203107)
+Migrating to AddAttachmentsPhotoToUser (20101024212141)
+Migrating to ChanceColumnInInstitutes (20101024214507)
+Migrating to ChangeTypeOnInstitute (20101027185138)
+Migrating to ChangeTypeOnSpecialty (20101027193602)
+Migrating to CreateEducations (20101104230204)
+Migrating to RenameColumnDateFromOnJobs (20101108002413)
+Migrating to AddColumnOnUsers (20101108032204)
+Migrating to CreateSlugs (20101108033323)
+Migrating to AddColumnInUsers (20101109013151)
+Migrating to CreateCompanies (20101110020049)
+Migrating to AddColumnCompanyId (20101117002715)
+Migrating to CreateCompetencies (20101214024446)
+Migrating to CreateItems (20101214024812)
+Migrating to CreateVacancies (20101223224721)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101009193746)
+Migrating to AddAdminToUser (20101009202119)
+Migrating to AddActiveToUser (20101009212310)
+Migrating to AddColumnToUsers (20101021174259)
+Migrating to CreateInstitutes (20101023013010)
+Migrating to CreateSpecialties (20101023013144)
+Migrating to CreateJobs (20101023014436)
+Migrating to AddUserToJobs (20101023015332)
+Migrating to CreateRoles (20101023184626)
+Migrating to CreateAssignments (20101023184946)
+Migrating to AddColumnToUser (20101024203107)
+Migrating to AddAttachmentsPhotoToUser (20101024212141)
+Migrating to ChanceColumnInInstitutes (20101024214507)
+Migrating to ChangeTypeOnInstitute (20101027185138)
+Migrating to ChangeTypeOnSpecialty (20101027193602)
+Migrating to CreateEducations (20101104230204)
+Migrating to RenameColumnDateFromOnJobs (20101108002413)
+Migrating to AddColumnOnUsers (20101108032204)
+Migrating to CreateSlugs (20101108033323)
+Migrating to AddColumnInUsers (20101109013151)
+Migrating to CreateCompanies (20101110020049)
+Migrating to AddColumnCompanyId (20101117002715)
+Migrating to CreateCompetencies (20101214024446)
+Migrating to CreateItems (20101214024812)
+Migrating to CreateVacancies (20101223224721)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCREATE TABLE "vacancies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job_id" integer, "area_id" integer, "remuneration" decimal, "datevacancy_date" date, "concerns" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101223224721')[0m
+Migrating to RemoveEvaluation (20101223225044)
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE "evaluations"[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mDROP TABLE "evaluations_competencies"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101223225044')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("assignments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("companies")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("competencies")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("educations")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("institutes")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("items")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("jobs")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("roles")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("slugs")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_info('index_slugs_on_n_s_s_and_s')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_slugs_on_sluggable_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("types")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("vacancies")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("competencies")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("educations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("institutes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("items")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("slugs")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_slugs_on_n_s_s_and_s')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_slugs_on_sluggable_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("types")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("vacancies")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101009193746)
+Migrating to AddAdminToUser (20101009202119)
+Migrating to AddActiveToUser (20101009212310)
+Migrating to AddColumnToUsers (20101021174259)
+Migrating to CreateInstitutes (20101023013010)
+Migrating to CreateSpecialties (20101023013144)
+Migrating to CreateJobs (20101023014436)
+Migrating to AddUserToJobs (20101023015332)
+Migrating to CreateRoles (20101023184626)
+Migrating to CreateAssignments (20101023184946)
+Migrating to AddColumnToUser (20101024203107)
+Migrating to AddAttachmentsPhotoToUser (20101024212141)
+Migrating to ChanceColumnInInstitutes (20101024214507)
+Migrating to ChangeTypeOnInstitute (20101027185138)
+Migrating to ChangeTypeOnSpecialty (20101027193602)
+Migrating to CreateEducations (20101104230204)
+Migrating to RenameColumnDateFromOnJobs (20101108002413)
+Migrating to AddColumnOnUsers (20101108032204)
+Migrating to CreateSlugs (20101108033323)
+Migrating to AddColumnInUsers (20101109013151)
+Migrating to CreateCompanies (20101110020049)
+Migrating to AddColumnCompanyId (20101117002715)
+Migrating to CreateCompetencies (20101214024446)
+Migrating to CreateItems (20101214024812)
+Migrating to CreateVacancies (20101223224721)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("competencies")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("educations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("institutes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("items")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("slugs")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_slugs_on_n_s_s_and_s')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_slugs_on_sluggable_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("types")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("vacancies")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("competencies")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("educations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("institutes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("items")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("slugs")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_slugs_on_n_s_s_and_s')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_slugs_on_sluggable_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("types")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("vacancies")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("competencies")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("educations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("institutes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("items")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("slugs")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_slugs_on_n_s_s_and_s')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_slugs_on_sluggable_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("types")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("vacancies")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (109.8ms)[0m   [0;1mDROP TABLE "items"[0m
+  [4;35;1mSQL (97.8ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20101214024812'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("competencies")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("educations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("institutes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("jobs")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("roles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("slugs")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_info('index_slugs_on_n_s_s_and_s')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_slugs_on_sluggable_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("types")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("vacancies")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101009193746)
+Migrating to AddAdminToUser (20101009202119)
+Migrating to AddActiveToUser (20101009212310)
+Migrating to AddColumnToUsers (20101021174259)
+Migrating to CreateInstitutes (20101023013010)
+Migrating to CreateSpecialties (20101023013144)
+Migrating to CreateJobs (20101023014436)
+Migrating to AddUserToJobs (20101023015332)
+Migrating to CreateRoles (20101023184626)
+Migrating to CreateAssignments (20101023184946)
+Migrating to AddColumnToUser (20101024203107)
+Migrating to AddAttachmentsPhotoToUser (20101024212141)
+Migrating to ChanceColumnInInstitutes (20101024214507)
+Migrating to ChangeTypeOnInstitute (20101027185138)
+Migrating to ChangeTypeOnSpecialty (20101027193602)
+Migrating to CreateEducations (20101104230204)
+Migrating to RenameColumnDateFromOnJobs (20101108002413)
+Migrating to AddColumnOnUsers (20101108032204)
+Migrating to CreateSlugs (20101108033323)
+Migrating to AddColumnInUsers (20101109013151)
+Migrating to CreateCompanies (20101110020049)
+Migrating to AddColumnCompanyId (20101117002715)
+Migrating to CreateCompetencies (20101214024446)
+Migrating to CreateItems (20101214024812)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "weighted" decimal, "competency_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101214024812')[0m
+Migrating to CreateVacancies (20101223224721)
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("competencies")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("educations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("institutes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("items")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("slugs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_slugs_on_n_s_s_and_s')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_slugs_on_sluggable_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("types")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("vacancies")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101009193746)
+Migrating to AddAdminToUser (20101009202119)
+Migrating to AddActiveToUser (20101009212310)
+Migrating to AddColumnToUsers (20101021174259)
+Migrating to CreateInstitutes (20101023013010)
+Migrating to CreateSpecialties (20101023013144)
+Migrating to CreateJobs (20101023014436)
+Migrating to AddUserToJobs (20101023015332)
+Migrating to CreateRoles (20101023184626)
+Migrating to CreateAssignments (20101023184946)
+Migrating to AddColumnToUser (20101024203107)
+Migrating to AddAttachmentsPhotoToUser (20101024212141)
+Migrating to ChanceColumnInInstitutes (20101024214507)
+Migrating to ChangeTypeOnInstitute (20101027185138)
+Migrating to ChangeTypeOnSpecialty (20101027193602)
+Migrating to CreateEducations (20101104230204)
+Migrating to RenameColumnDateFromOnJobs (20101108002413)
+Migrating to AddColumnOnUsers (20101108032204)
+Migrating to CreateSlugs (20101108033323)
+Migrating to AddColumnInUsers (20101109013151)
+Migrating to CreateCompanies (20101110020049)
+Migrating to AddColumnCompanyId (20101117002715)
+Migrating to CreateCompetencies (20101214024446)
+Migrating to CreateItems (20101214024812)
+Migrating to DeleteVacancies (20101223231225)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mDROP TABLE "vacancies"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101223231225')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("competencies")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("educations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("institutes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("items")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("slugs")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_slugs_on_n_s_s_and_s')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_slugs_on_sluggable_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("types")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101009193746)
+Migrating to AddAdminToUser (20101009202119)
+Migrating to AddActiveToUser (20101009212310)
+Migrating to AddColumnToUsers (20101021174259)
+Migrating to CreateInstitutes (20101023013010)
+Migrating to CreateSpecialties (20101023013144)
+Migrating to CreateJobs (20101023014436)
+Migrating to AddUserToJobs (20101023015332)
+Migrating to CreateRoles (20101023184626)
+Migrating to CreateAssignments (20101023184946)
+Migrating to AddColumnToUser (20101024203107)
+Migrating to AddAttachmentsPhotoToUser (20101024212141)
+Migrating to ChanceColumnInInstitutes (20101024214507)
+Migrating to ChangeTypeOnInstitute (20101027185138)
+Migrating to ChangeTypeOnSpecialty (20101027193602)
+Migrating to CreateEducations (20101104230204)
+Migrating to RenameColumnDateFromOnJobs (20101108002413)
+Migrating to AddColumnOnUsers (20101108032204)
+Migrating to CreateSlugs (20101108033323)
+Migrating to AddColumnInUsers (20101109013151)
+Migrating to CreateCompanies (20101110020049)
+Migrating to AddColumnCompanyId (20101117002715)
+Migrating to CreateCompetencies (20101214024446)
+Migrating to CreateItems (20101214024812)
+Migrating to DeleteVacancies (20101223231225)
+Migrating to CreateVacancies (20101223231354)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101009193746)
+Migrating to AddAdminToUser (20101009202119)
+Migrating to AddActiveToUser (20101009212310)
+Migrating to AddColumnToUsers (20101021174259)
+Migrating to CreateInstitutes (20101023013010)
+Migrating to CreateSpecialties (20101023013144)
+Migrating to CreateJobs (20101023014436)
+Migrating to AddUserToJobs (20101023015332)
+Migrating to CreateRoles (20101023184626)
+Migrating to CreateAssignments (20101023184946)
+Migrating to AddColumnToUser (20101024203107)
+Migrating to AddAttachmentsPhotoToUser (20101024212141)
+Migrating to ChanceColumnInInstitutes (20101024214507)
+Migrating to ChangeTypeOnInstitute (20101027185138)
+Migrating to ChangeTypeOnSpecialty (20101027193602)
+Migrating to CreateEducations (20101104230204)
+Migrating to RenameColumnDateFromOnJobs (20101108002413)
+Migrating to AddColumnOnUsers (20101108032204)
+Migrating to CreateSlugs (20101108033323)
+Migrating to AddColumnInUsers (20101109013151)
+Migrating to CreateCompanies (20101110020049)
+Migrating to AddColumnCompanyId (20101117002715)
+Migrating to CreateCompetencies (20101214024446)
+Migrating to CreateItems (20101214024812)
+Migrating to CreateVacancies (20101223231354)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "vacancies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company_id" integer, "job_id" integer, "area_id" integer, "remuneration" decimal, "datevacancy_date" date, "concerns" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101223231354')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("competencies")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("educations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("institutes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("items")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("slugs")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_slugs_on_n_s_s_and_s')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_slugs_on_sluggable_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("types")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("vacancies")[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mRole Load (1.1ms)[0m   [0mSELECT * FROM "roles" [0m
+  [4;36;1mRole Create (0.6ms)[0m   [0;1mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES('human_resources', '2010-12-23 23:18:23', '2010-12-23 23:18:23')[0m
+  [4;35;1mRole Load (1.3ms)[0m   [0mSELECT * FROM "roles" [0m
