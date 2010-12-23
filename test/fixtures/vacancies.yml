@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  job_id: 
+  area_id: 
+  company_id: 
+  remuneration: 
+  datevacancy_date: 
+  concerns: MyText
+
+two:
+  job_id: 
+  area_id: 
+  company_id: 
+  remuneration: 
+  datevacancy_date: 
+  concerns: MyText
