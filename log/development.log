@@ -47724,3 +47724,339 @@ Rendered shared/_admin_navigation (184.5ms)
 Rendered shared/_human_resources (1.8ms)
 Rendered shared/_navigation (189.0ms)
 Completed in 261ms (View: 197, DB: 6) | 200 OK [http://localhost/companies/company-name/vacancies]
+  [4;36;1mSQL (1.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateVacancies (20101223231354)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mDROP TABLE "vacancies"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20101223231354'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("competencies")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("educations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("institutes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("items")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("slugs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_slugs_on_n_s_s_and_s')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_slugs_on_sluggable_id')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mPRAGMA index_list("types")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20101009193746)
+Migrating to AddAdminToUser (20101009202119)
+Migrating to AddActiveToUser (20101009212310)
+Migrating to AddColumnToUsers (20101021174259)
+Migrating to CreateInstitutes (20101023013010)
+Migrating to CreateSpecialties (20101023013144)
+Migrating to CreateJobs (20101023014436)
+Migrating to AddUserToJobs (20101023015332)
+Migrating to CreateRoles (20101023184626)
+Migrating to CreateAssignments (20101023184946)
+Migrating to AddColumnToUser (20101024203107)
+Migrating to AddAttachmentsPhotoToUser (20101024212141)
+Migrating to ChanceColumnInInstitutes (20101024214507)
+Migrating to ChangeTypeOnInstitute (20101027185138)
+Migrating to ChangeTypeOnSpecialty (20101027193602)
+Migrating to CreateEducations (20101104230204)
+Migrating to RenameColumnDateFromOnJobs (20101108002413)
+Migrating to AddColumnOnUsers (20101108032204)
+Migrating to CreateSlugs (20101108033323)
+Migrating to AddColumnInUsers (20101109013151)
+Migrating to CreateCompanies (20101110020049)
+Migrating to AddColumnCompanyId (20101117002715)
+Migrating to CreateCompetencies (20101214024446)
+Migrating to CreateItems (20101214024812)
+Migrating to CreateVacancies (20101223231354)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "vacancies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "company_id" integer, "job" varchar(255), "area" varchar(255), "remuneration" decimal, "vacancy_date" date, "concerns" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101223231354')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("companies")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("competencies")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("educations")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("institutes")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("items")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("jobs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("roles")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("slugs")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_info('index_slugs_on_n_s_s_and_s')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_slugs_on_sluggable_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("types")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("vacancies")[0m
+
+
+Processing CompetenciesController#index (for 127.0.0.1 at 2010-12-24 19:10:03) [GET]
+  Parameters: {"action"=>"index", "company_id"=>"company-name", "controller"=>"competencies"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mCompetency Load (1.2ms)[0m   [0mSELECT * FROM "competencies" [0m
+Rendering template within layouts/application
+Rendering competencies/index
+  [4;36;1mCompany Load (0.5ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (24.7ms)
+Rendered shared/_human_resources (1.7ms)
+Rendered shared/_navigation (28.9ms)
+Completed in 259ms (View: 56, DB: 3) | 200 OK [http://localhost/companies/company-name/competencies]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-12-24 19:10:10) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"login", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (3.2ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mJob Load (5.6ms)[0m   [0;1mSELECT * FROM "jobs" WHERE ("jobs".user_id = 31) [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (156.6ms)
+Rendered shared/_human_resources (1.7ms)
+Rendered shared/_navigation (161.0ms)
+Completed in 251ms (View: 172, DB: 10) | 200 OK [http://localhost/users/login/jobs]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-12-24 19:10:13) [GET]
+  Parameters: {"action"=>"new", "user_id"=>"login", "controller"=>"jobs"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (3.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendering template within layouts/application
+Rendering jobs/new
+Rendered jobs/_form (19.6ms)
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (17.0ms)
+Rendered shared/_human_resources (1.5ms)
+Rendered shared/_navigation (21.1ms)
+Completed in 305ms (View: 61, DB: 4) | 200 OK [http://localhost/users/login/jobs/new]
+
+
+Processing EducationsController#index (for 127.0.0.1 at 2010-12-24 19:10:17) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"login", "controller"=>"educations"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendering template within layouts/application
+Rendering educations/index
+  [4;35;1mEducation Load (0.4ms)[0m   [0mSELECT * FROM "educations" WHERE ((user_id =31) AND (type_education ='secondary')) [0m
+  [4;36;1mEducation Load (0.3ms)[0m   [0;1mSELECT * FROM "educations" WHERE ((user_id =31) AND (type_education ='tertiary')) [0m
+  [4;35;1mEducation Load (1.3ms)[0m   [0mSELECT * FROM "educations" WHERE ((user_id =31) AND (type_education ='university')) [0m
+  [4;36;1mEducation Load (0.3ms)[0m   [0;1mSELECT * FROM "educations" WHERE ((user_id =31) AND (type_education ='graduate')) [0m
+  [4;35;1mCompany Load (0.5ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (157.9ms)
+Rendered shared/_human_resources (2.1ms)
+Rendered shared/_navigation (162.9ms)
+Completed in 252ms (View: 183, DB: 4) | 200 OK [http://localhost/users/login/educations]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-12-24 19:10:20) [GET]
+  Parameters: {"action"=>"show", "id"=>"login", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (0.7ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;35;1mUser Load (2.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users".company_id = 20) AND (users.cached_slug = 'login') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (1.8ms)
+Rendered shared/_human_resources (1.5ms)
+Rendered shared/_navigation (6.1ms)
+Completed in 257ms (View: 22, DB: 4) | 200 OK [http://localhost/users/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-24 19:10:20) [GET]
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png" with {:method=>:get}):
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-12-24 19:10:23) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"login", "controller"=>"jobs"}
+  [4;35;1mUser Load (4.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;35;1mJob Load (0.3ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 31) [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mCompany Load (6.0ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (160.9ms)
+Rendered shared/_human_resources (2.7ms)
+Rendered shared/_navigation (166.7ms)
+Completed in 248ms (View: 165, DB: 11) | 200 OK [http://localhost/users/login/jobs]
+
+
+Processing JobsController#new (for 127.0.0.1 at 2010-12-24 19:10:27) [GET]
+  Parameters: {"action"=>"new", "user_id"=>"login", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendering template within layouts/application
+Rendering jobs/new
+Rendered jobs/_form (14.1ms)
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (20.6ms)
+Rendered shared/_human_resources (2.0ms)
+Rendered shared/_navigation (25.4ms)
+Completed in 289ms (View: 49, DB: 2) | 200 OK [http://localhost/users/login/jobs/new]
+
+
+Processing JobsController#create (for 127.0.0.1 at 2010-12-24 19:10:54) [POST]
+  Parameters: {"commit"=>"Add", "action"=>"create", "authenticity_token"=>"B8YlMjN7enTpmhCkRVka7TS9mwO02y5XoWO9sD6PenI=", "user_id"=>"login", "job"=>{"date_until(1i)"=>"2010", "company"=>"insignia", "date_until(2i)"=>"12", "date_until(3i)"=>"24", "employment"=>"desarrollador web", "date_from(1i)"=>"2010", "date_from(2i)"=>"9", "date_from(3i)"=>"1"}, "controller"=>"jobs"}
+  [4;36;1mUser Load (1.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mJob Create (3.4ms)[0m   [0;1mINSERT INTO "jobs" ("company", "created_at", "date_until", "employment", "updated_at", "date_from", "user_id", "description") VALUES('insignia', '2010-12-24 22:10:54', '2010-12-24', 'desarrollador web', '2010-12-24 22:10:54', '2010-09-01', 31, NULL)[0m
+Redirected to http://localhost:3000/users/login/jobs
+Completed in 395ms (DB: 6) | 302 Found [http://localhost/users/login/jobs]
+
+
+Processing JobsController#index (for 127.0.0.1 at 2010-12-24 19:10:54) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"login", "controller"=>"jobs"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (3.2ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;35;1mJob Load (6.0ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs".user_id = 31) [0m
+Rendering template within layouts/application
+Rendering jobs/index
+  [4;36;1mCompany Load (0.6ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (18.4ms)
+Rendered shared/_human_resources (1.6ms)
+Rendered shared/_navigation (24.8ms)
+Completed in 285ms (View: 40, DB: 11) | 200 OK [http://localhost/users/login/jobs]
+
+
+Processing JobsController#edit (for 127.0.0.1 at 2010-12-24 19:11:02) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3", "user_id"=>"login", "controller"=>"jobs"}
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;35;1mJob Load (0.5ms)[0m   [0mSELECT * FROM "jobs" WHERE ("jobs"."id" = 3 AND ("jobs".user_id = 31)) [0m
+Rendering template within layouts/application
+Rendering jobs/edit
+Rendered jobs/_form (15.0ms)
+  [4;36;1mCompany Load (7.5ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (29.2ms)
+Rendered shared/_human_resources (1.7ms)
+Rendered shared/_navigation (33.7ms)
+Completed in 299ms (View: 68, DB: 10) | 200 OK [http://localhost/users/login/jobs/3/edit]
+
+
+Processing EducationsController#index (for 127.0.0.1 at 2010-12-24 19:11:11) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"login", "controller"=>"educations"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (0.4ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendering template within layouts/application
+Rendering educations/index
+  [4;35;1mEducation Load (2.6ms)[0m   [0mSELECT * FROM "educations" WHERE ((user_id =31) AND (type_education ='secondary')) [0m
+  [4;36;1mEducation Load (0.3ms)[0m   [0;1mSELECT * FROM "educations" WHERE ((user_id =31) AND (type_education ='tertiary')) [0m
+  [4;35;1mEducation Load (0.3ms)[0m   [0mSELECT * FROM "educations" WHERE ((user_id =31) AND (type_education ='university')) [0m
+  [4;36;1mEducation Load (0.3ms)[0m   [0;1mSELECT * FROM "educations" WHERE ((user_id =31) AND (type_education ='graduate')) [0m
+  [4;35;1mCompany Load (0.5ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (17.8ms)
+Rendered shared/_human_resources (13.3ms)
+Rendered shared/_navigation (153.6ms)
+Completed in 238ms (View: 165, DB: 5) | 200 OK [http://localhost/users/login/educations]
+
+
+Processing EducationsController#new (for 127.0.0.1 at 2010-12-24 19:11:13) [GET]
+  Parameters: {"action"=>"new", "user_id"=>"login", "controller"=>"educations"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendering template within layouts/application
+Rendering educations/new
+  [4;36;1mInstitute Load (0.4ms)[0m   [0;1mSELECT * FROM "institutes" WHERE ("institutes"."level" IS NULL) [0m
+  [4;35;1mSpecialty Load (0.4ms)[0m   [0mSELECT * FROM "specialties" [0m
+Rendered educations/_form (51.5ms)
+  [4;36;1mCompany Load (6.6ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (25.7ms)
+Rendered shared/_human_resources (4.0ms)
+Rendered shared/_navigation (32.1ms)
+Completed in 382ms (View: 307, DB: 9) | 200 OK [http://localhost/users/login/educations/new]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-12-24 19:11:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"login", "controller"=>"users"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mRole Load (0.6ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users".company_id = 20) AND (users.cached_slug = 'login') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (1.4ms)
+Rendered shared/_human_resources (1.4ms)
+Rendered shared/_navigation (5.4ms)
+Completed in 77ms (View: 13, DB: 2) | 200 OK [http://localhost/users/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-24 19:11:17) [GET]
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png" with {:method=>:get}):
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-12-24 19:11:25) [GET]
+  Parameters: {"action"=>"edit", "id"=>"login", "controller"=>"users"}
+  [4;36;1mUser Load (4.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (3.9ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+  [4;36;1mCompany Load (0.6ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users".company_id = 20) AND (users.cached_slug = 'login') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT * FROM "roles" [0m
+  [4;35;1mRole Load (7.4ms)[0m   [0mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE ("roles"."id" = 1) AND (("assignments".user_id = 31)) LIMIT 1[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE ("roles"."id" = 2) AND (("assignments".user_id = 31)) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT "roles".id FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE ("roles"."id" = 3) AND (("assignments".user_id = 31)) LIMIT 1[0m
+Rendered shared/_admin_navigation (1.8ms)
+Rendered shared/_human_resources (1.6ms)
+Rendered shared/_navigation (6.1ms)
+Completed in 270ms (View: 48, DB: 18) | 200 OK [http://localhost/users/login/edit]

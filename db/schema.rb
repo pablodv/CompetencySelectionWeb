@@ -135,8 +135,8 @@ ActiveRecord::Schema.define(:version => 20101223231354) do
 
   create_table "vacancies", :force => true do |t|
     t.integer  "company_id"
-    t.integer  "job_id"
-    t.integer  "area_id"
+    t.string   "job"
+    t.string   "area"
     t.decimal  "remuneration"
     t.date     "vacancy_date"
     t.text     "concerns"

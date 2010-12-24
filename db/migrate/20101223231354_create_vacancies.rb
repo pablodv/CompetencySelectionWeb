@@ -2,8 +2,8 @@ class CreateVacancies < ActiveRecord::Migration
   def self.up
     create_table :vacancies do |t|
       t.integer :company_id
-      t.integer :job_id
-      t.integer :area_id
+      t.string  :job
+      t.string  :area
       t.decimal :remuneration
       t.date :vacancy_date
       t.text :concerns
