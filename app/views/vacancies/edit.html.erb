@@ -1,0 +1,6 @@
+<% form_for [current_company, @vacancy] do |f| %>
+ <%= render :partial => 'form', :object => f %>
+  <%= f.submit "Update" %>
+  |
+  <%= link_to 'Cancel', company_vacancies_path(current_company) %>
+<% end %>

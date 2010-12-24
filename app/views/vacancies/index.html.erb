@@ -1,0 +1,27 @@
+<h3>Vacancies</h3>
+<%= link_to "New Vacancy", new_company_vacancy_path(current_company)%>
+<table>
+  <thead>
+    <tr>
+      <td>Area</td>
+      <td>Job</td>
+      <td>Vacancy Date</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @vacancies.each do |v| %>
+      <tr>
+        <td><%= v.area_id %></td>
+        <td><%= v.job_id %></td>
+        <td><%= v.vacancy_date %></td>
+        <td><%= link_to 'View Competencies', '#' %></td>
+        <td><%= link_to 'Edit', edit_company_vacancy_path(current_company, v) %></td>
+        <td><%#= link_to 'Delete',[current_company, c], :method => :delete, :confirm => "Are you sure?" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

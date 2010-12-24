@@ -1,7 +1,5 @@
 class Competency < ActiveRecord::Base
-  has_and_belongs_to_many :evaluations
   has_many :items
-  belongs_to :company
 
   validates_presence_of   :name, :description, :weighted
   validates_uniqueness_of :name

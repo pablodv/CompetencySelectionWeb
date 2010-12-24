@@ -138,7 +138,7 @@ ActiveRecord::Schema.define(:version => 20101223231354) do
     t.integer  "job_id"
     t.integer  "area_id"
     t.decimal  "remuneration"
-    t.date     "datevacancy_date"
+    t.date     "vacancy_date"
     t.text     "concerns"
     t.datetime "created_at"
     t.datetime "updated_at"

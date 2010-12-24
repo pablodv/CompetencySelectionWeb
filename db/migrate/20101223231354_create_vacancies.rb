@@ -5,7 +5,7 @@ class CreateVacancies < ActiveRecord::Migration
       t.integer :job_id
       t.integer :area_id
       t.decimal :remuneration
-      t.date :datevacancy_date
+      t.date :vacancy_date
       t.text :concerns
 
       t.timestamps

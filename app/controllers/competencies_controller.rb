@@ -18,9 +18,4 @@ class CompetenciesController < InheritedResources::Base
     destroy! { redirect_to company_competencies_path(current_company) }
   end
 
-  protected
-
-    def begin_of_association_chain
-      current_company
-    end
 end
