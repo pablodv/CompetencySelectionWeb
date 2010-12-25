@@ -1,5 +1,7 @@
-<% form_for [current_user, @education] do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => 'form', :object => f %>
-  <%= f.submit 'Update' %> | <%= link_to 'Cancel', user_eductions_path(current_user) %>
-<% end %>
+<h1>Edit education information</h1>
+<div class="app-form">
+  <% form_for [current_user, @education] do |f| %>
+    <%= render :partial => 'form', :object => f %>
+    <%= f.submit 'Update' %> | <%= link_to 'Cancel', user_eductions_path(current_user) %>
+  <% end %>
+</div>

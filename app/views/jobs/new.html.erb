@@ -1,5 +1,7 @@
-<% form_for [current_user, @job] do |f| %>
-  <%= f.error_messages %>
-  <%= render  :partial => 'form', :object => f %>
-  <%= f.submit 'Add' %> | <%= link_to 'Cancel', user_jobs_path(current_user) %>
-<% end %>
+<h1>New job</h1>
+<div class="app-form">
+  <% form_for [current_user, @job] do |f| %>
+    <%= render  :partial => 'form', :object => f %>
+    <%= f.submit 'Add' %> | <%= link_to 'Cancel', user_jobs_path(current_user) %>
+  <% end %>
+</div>

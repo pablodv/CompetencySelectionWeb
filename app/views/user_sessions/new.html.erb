@@ -1,19 +1,22 @@
 <h1>Login</h1>
-
-<% form_for @user_session, :url => user_sessions_path do |f| %>
-  <%= f.error_messages %>
-  <%= f.label :company %><br />
-  <%= f.text_field :company_login %><br />
-  <br/>
-  <%= f.label :login %><br />
-  <%= f.text_field :login %><br />
-  <br />
-  <%= f.label :password %><br />
-  <%= f.password_field :password %><br />
-  <br />
-  <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
-  <br />
-  <%= f.submit "Login" %>
-<% end %>
-
-<%= link_to 'Register', registration_url %>
+<div class="app-form">
+  <% form_for @user_session, :url => user_sessions_path do |f| %>
+    <%= f.error_messages %>
+    <div class="field">
+      <%= f.label :company %>
+      <%= f.text_field :company_login %>
+    </div>
+    <div class="field">
+      <%= f.label :login %>
+      <%= f.text_field :login %>
+    </div>
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <%= f.check_box :remember_me %><%= f.label :remember_me %>
+    </div>
+    <%= f.submit "Login" %> | <%= link_to 'Register', registration_url %>
+  <% end %>
+</div>

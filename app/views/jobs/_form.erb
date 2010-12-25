@@ -1,8 +1,17 @@
-<%= form.label :company %><br/>
-<%= form.text_field :company %><br/>
-<%= form.label :employment %><br/>
-<%= form.text_field :employment %><br/>
-<%= form.label :date_from %><br/>
-<%= form.date_select :date_from%><br/>
-<%= form.label :date_until %><br/>
-<%= form.date_select :date_until %><br/>
+<%= form.error_messages %>
+<div class="field">
+  <%= form.label :company %>
+  <%= form.text_field :company %>
+</div>
+<div class="field">
+  <%= form.label :employment %>
+  <%= form.text_field :employment %>
+</div>
+<div class="field">
+  <%= form.label :date_from %>
+  <%= form.date_select :date_from%>
+</div>
+<div class="field">
+  <%= form.label :date_until %>
+  <%= form.date_select :date_until %>
+</div>

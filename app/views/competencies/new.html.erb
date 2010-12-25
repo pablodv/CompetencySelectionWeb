@@ -1,6 +1,9 @@
-<% form_for [current_company, @competency] do |f| %>
-  <%= render :partial => 'form', :object => f %>
-  <%= f.submit "Add" %>
-  |
-  <%= link_to 'Cancel', company_competencies_path(current_company) %>
-<% end %>
+<h1>New competency</h1>
+<div class="app-form">
+  <% form_for [current_company, @competency] do |f| %>
+    <%= render :partial => 'form', :object => f %>
+    <%= f.submit "Add" %>
+    |
+    <%= link_to 'Cancel', company_competencies_path(current_company) %>
+  <% end %>
+</div>

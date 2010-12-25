@@ -1,6 +1,7 @@
-<% form_for @user do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => "form", :object => f, :locals => {:register => true} %>
-  <%= f.submit 'Register' %>
-<% end %>
-<%= link_to 'Back', root_url %>
+<div class="app-form">
+  <% form_for @user do |f| %>
+    <%= render :partial => "form", :object => f, :locals => {:register => true} %>
+    <%= f.submit 'Register' %>
+  <% end %>
+  <%= link_to 'Back', root_url %>
+</div>

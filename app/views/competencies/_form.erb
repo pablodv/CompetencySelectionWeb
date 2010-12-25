@@ -1,7 +1,13 @@
 <%= form.error_messages %>
-<%= form.label :name %><br/>
-<%= form.text_field :name %><br/>
-<%= form.label :description %><br/>
-<%= form.text_area :description %><br/>
-<%= form.label :weighted %><br/>
-<%= form.text_field :weighted %><br/>
+<div class="field">
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</div>
+<div class="field">
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+</div>
+<div class="field">
+  <%= form.label :weighted %>
+  <%= form.text_field :weighted %>
+</div>

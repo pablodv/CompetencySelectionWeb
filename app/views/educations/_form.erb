@@ -1,0 +1,26 @@
+<%= form.error_messages %>
+<div class="field">
+  <%= form.label :type_education %>
+  <%= form.select :type_education, Education::EDUCATION_TYPE, {:include_blank => 'Select a value please...'} %>
+</div>
+<div class="field">
+  <%= form.label :institute_id %>
+  <%= form.select :institute_id, Institute.find_all_by_level(@education.type_education).collect {|s| [s.name, s.id]}, {:include_blank => 'Select a value please...'} %>
+</div>
+<div class="field">
+  <%= form.label :specialty_id %>
+  <%= form.select :specialty_id, Specialty.find(:all).collect {|s| [s.name, s.id]}, {:include_blank => 'Select a value please...'} %>
+</div>
+<div class="field">
+  <%= form.label :date_from %>
+  <%= form.date_select :date_from %>
+</div>
+<div class="field">
+  <%= form.label :date_until %>
+  <%= form.date_select :date_until %>
+</div>
+<div class="field">
+  <%= form.label :comment %>
+  <%= form.text_area :comment %>
+</div>
+<%= jquery_onready "selectCascadeInstitute();" %>

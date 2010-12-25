@@ -1,4 +1,8 @@
-<%= form.label :name %> <br/>
-<%= form.text_field :name %> <br/>
-<%= form.label :level %><br/>
-<%= form.select :level, Institute::LEVEL, {:include_blank => 'Select a type'} %><br/>
+<div class="field">
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</div>
+<div class="field">
+  <%= form.label :level %>
+  <%= form.select :level, Institute::LEVEL, {:include_blank => 'Select a type'} %>
+</div>

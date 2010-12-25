@@ -1,8 +1,15 @@
-<% form_for current_company do |f| %>
-  <%= f.error_messages %>
-  <%= f.label :name %><br/>
-  <%= f.text_field :name %><br/>
-  <%= f.label :website %><br/>
-  <%= f.text_field :website %><br/>
-  <%= f.submit "Update" %>
-<% end %>
+<h1>Edit company information</h1>
+<div class="app-form">
+  <% form_for current_company do |f| %>
+    <%= f.error_messages %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :website %>
+      <%= f.text_field :website %>
+    </div>
+    <%= f.submit "Update" %> | <%= link_to 'Cancel', welcome_path %>
+  <% end %>
+</div>

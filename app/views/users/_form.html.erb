@@ -1,20 +1,38 @@
+<%= form.error_messages %>
 <% if register %>
+  <h1>Register your company</h1>
   <% form.fields_for :company_attributes, @user.company do |company_form|%>
-    <%= company_form.label :name %><br/>
-    <%= company_form.text_field :name %><br/>
-    <%= company_form.label :login, "Company Login" %><br/>
-    <%= company_form.text_field :login %><br/>
+<div class="field">
+    <%= company_form.label :name %>
+    <%= company_form.text_field :name %>
+</div>
+<div class="field">
+    <%= company_form.label :login, "Company Login" %>
+    <%= company_form.text_field :login %>
+</div>
   <% end %>
 <% end %>
-<%= form.label :first_name %><br />
-<%= form.text_field :first_name %><br />
-<%= form.label :last_name %><br />
-<%= form.text_field :last_name %><br />
-<%= form.label :login %><br />
-<%= form.text_field :login %><br />
-<%= form.label :email %><br />
-<%= form.text_field :email %><br />
-<%= form.label :password, form.object.new_record? ? nil : "Change password" %><br />
-<%= form.password_field :password %><br />
-<%= form.label :password_confirmation %><br />
-<%= form.password_field :password_confirmation %><br />
+<div class="field">
+<%= form.label :first_name %>
+<%= form.text_field :first_name %>
+</div>
+<div class="field">
+<%= form.label :last_name %>
+<%= form.text_field :last_name %>
+</div>
+<div class="field">
+<%= form.label :login %>
+<%= form.text_field :login %>
+</div>
+<div class="field">
+<%= form.label :email %>
+<%= form.text_field :email %>
+</div>
+<div class="field">
+<%= form.label :password, form.object.new_record? ? nil : "Change password" %>
+<%= form.password_field :password %>
+</div>
+<div class="field">
+<%= form.label :password_confirmation %>
+<%= form.password_field :password_confirmation %>
+</div>

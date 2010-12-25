@@ -1,33 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-	<head>
-		<title>Administracion de CV</title>
-		<meta http-equiv="content-type" content="text/xhtml; charset=utf-8" />
+  <head>
+    <meta http-equiv="content-type" content="text/xhtml; charset=utf-8" />
+    <title>Competencies Selector</title>
+    <%= stylesheet_link_tag "competencies_main" %>
     <%= javascript_include_tag 'jquery', 'jrails', 'application', 'prototype', 'effects' %>
-	</head>
-	<body>
-		<div id="container">
-      <div id="user_status">
-        <% if logged_in? %>
-          Welcome <%=h current_user.login %>! 
-          <%= link_to "Log out", logout_path %>
-        <% end %>
-      </div>
-      
-      <div id="navigation">
-        <% if logged_in? %>
-          <%= render :partial => 'shared/navigation'%>
-        <% end %>
-      </div>
+  </head>
+  <body>
+    <div id="contents">
+      <div id="contents-wrapper">
+        <div id="container" class="clearfix">
+          <div id="left" class="column"></div>
+          <div id="center" class="column">
 
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
+            <div id="temp-area" ></div>
+              <% if logged_in? %>
+                <%= render :partial => 'shared/navigation'%>
+              <% end %>
 
-			<div id="content">				
-				<%= yield %>
-			</div>
-		</div>
-	</body>
+            <% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+            <% end %>
+
+            <div id="center-wrapper"><%= yield %></div>
+          </div>
+
+          <div id="right" class="column">
+            <div id="right-wrapper">
+              <% if logged_in? %>
+                Welcome <%=h current_user.login %>!
+                <%= link_to "Log out", logout_path %>
+              <% end %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

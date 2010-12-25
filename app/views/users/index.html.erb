@@ -1,7 +1,8 @@
+<h1></h1>
 <% @users.each do |user| %>
   <%= user.first_name %>
-  <%= user.last_name %><br/>
-  <%= user.login %><br/>
+  <%= user.last_name %>
+  <%= user.login %>
   <%= link_to 'Show', user_path(user) %>
   |
   <%= link_to 'Edit', edit_user_path(user) %>

@@ -1,7 +1,9 @@
-<% form_for @user do |f| %>
-  <%= f.error_messages %>
-  <%= render :partial => "form", :object => f, :locals => {:register => false} %>
-  <%= f.submit 'Invite' %>
-  |
-  <%= link_to 'cancel', welcome_path %>
-<% end %>
+<h1></h1>
+<div class="app-form">
+  <% form_for @user do |f| %>
+    <%= render :partial => "form", :object => f, :locals => {:register => false} %>
+    <%= f.submit 'Invite' %>
+    |
+    <%= link_to 'cancel', welcome_path %>
+  <% end %>
+</div>
