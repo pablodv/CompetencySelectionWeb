@@ -1,13 +1,21 @@
+jQuery(document).ready(function() {
+  appearNotice();
+});
+
+function appearNotice() {
+  setTimeout("$('#notice').fadeOut(5000);", 2000);
+}
+
 function selectCascadeInstitute(){
-    jQuery("select#education_type_education").change(function(){
+    $("select#education_type_education").change(function(){
       var id_value_string = jQuery(this).val();
       if (id_value_string == "") {
-         jQuery("select#education_institute_id option").remove();
+         $("select#education_institute_id option").remove();
          var row = "<option value=\"" + "" + "\">" + "Select a value please..." + "</option>";
-         jQuery(row).appendTo("select#education_institute_id");
+         $(row).appendTo("select#education_institute_id");
       }
       else {
-        jQuery.ajax({
+        $.ajax({
           dataType: "json",
           cache: false,
           url: 'institute_type_education/' + id_value_string,
@@ -16,15 +24,15 @@ function selectCascadeInstitute(){
           alert("Failed to submit : "+ errorTextStatus+" ;"+error);
           },
           success: function(data){
-            jQuery("select#education_institute_id option").remove();
+            $("select#education_institute_id option").remove();
             var row = "<option value=\"" + "" + "\">" + "Select a value please..." + "</option>";
-            jQuery(row).appendTo("select#education_institute_id");
+            $(row).appendTo("select#education_institute_id");
 
-            jQuery.each(data, function(i, j){
+            $.each(data, function(i, j){
               row = "<option value=\"" + j.institute.id + "\">" + stripHTML(j.institute.name) + "</option>";
-              jQuery(row).appendTo("select#education_institute_id");
+              $(row).appendTo("select#education_institute_id");
             });
-            jQuery("select#education_institute_id")[0].highlight();
+            $("select#education_institute_id")[0].highlight();
             }
         });
       };
@@ -33,15 +41,15 @@ function selectCascadeInstitute(){
 
 //
 /*function selectCascadeSpecialty(){
-    jQuery("select#education_type_education").change(function(){
-      var id_value_string = jQuery(this).val();
+    $("select#education_type_education").change(function(){
+      var id_value_string = $(this).val();
       if (id_value_string == "") {
-         jQuery("select#education_specialty_id option").remove();
+         $("select#education_specialty_id option").remove();
          var row = "<option value=\"" + "" + "\">" + "Select a value please..." + "</option>";
-         jQuery(row).appendTo("select#education_specialty_id");
+         $(row).appendTo("select#education_specialty_id");
       }
       else {
-        jQuery.ajax({
+        $.ajax({
           dataType: "json",
           cache: false,
           url: 'specialty_type_education/' + id_value_string,
@@ -50,15 +58,15 @@ function selectCascadeInstitute(){
           alert("Failed to submit : "+ errorTextStatus+" ;"+error);
           },
           success: function(data){
-            jQuery("select#education_specialty_id option").remove();
+            $("select#education_specialty_id option").remove();
             var row = "<option value=\"" + "" + "\">" + "Select a value please..." + "</option>";
-            jQuery(row).appendTo("select#education_specialty_id");
+            $(row).appendTo("select#education_specialty_id");
 
-            jQuery.each(data, function(i, j){
+            $.each(data, function(i, j){
               row = "<option value=\"" + j.institute.id + "\">" + stripHTML(j.institute.name) + "</option>";
-              jQuery(row).appendTo("select#education_specialty_id");
+              $(row).appendTo("select#education_specialty_id");
             });
-            jQuery("select#education_specialty_id")[0].highlight();
+            $("select#education_specialty_id")[0].highlight();
             }
         });
       };
