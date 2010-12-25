@@ -52126,3 +52126,237 @@ Processing EducationsController#institute_type_education (for 127.0.0.1 at 2010-
   [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
   [4;35;1mInstitute Load (0.5ms)[0m   [0mSELECT * FROM "institutes" WHERE ("institutes"."level" = 'secondary') [0m
 Completed in 214ms (View: 6, DB: 2) | 200 OK [http://localhost/users/login/educations/institute_type_education/secondary?_=1293292837311]
+
+
+Processing EducationsController#create (for 127.0.0.1 at 2010-12-25 13:28:11) [POST]
+  Parameters: {"commit"=>"Add", "action"=>"create", "authenticity_token"=>"bLfYa95WvvVr8lImqjKP+Ge/pqa7DRusiMxy1IQ+uaQ=", "user_id"=>"login", "controller"=>"educations", "education"=>{"comment"=>"", "date_until(1i)"=>"2010", "date_until(2i)"=>"12", "date_until(3i)"=>"25", "type_education"=>"secondary", "institute_id"=>"1", "date_from(1i)"=>"2010", "specialty_id"=>"", "date_from(2i)"=>"12", "date_from(3i)"=>"25"}}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Redirected to http://localhost:3000/users/login/educations
+Completed in 209ms (DB: 1) | 302 Found [http://localhost/users/login/educations]
+
+
+Processing EducationsController#index (for 127.0.0.1 at 2010-12-25 13:28:12) [GET]
+  Parameters: {"action"=>"index", "user_id"=>"login", "controller"=>"educations"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendering template within layouts/application
+Rendering educations/index
+Rendered shared/_notice (0.2ms)
+  [4;36;1mEducation Load (0.4ms)[0m   [0;1mSELECT * FROM "educations" WHERE ((user_id =31) AND (type_education ='secondary')) [0m
+  [4;35;1mEducation Load (0.3ms)[0m   [0mSELECT * FROM "educations" WHERE ((user_id =31) AND (type_education ='tertiary')) [0m
+  [4;36;1mEducation Load (0.3ms)[0m   [0;1mSELECT * FROM "educations" WHERE ((user_id =31) AND (type_education ='university')) [0m
+  [4;35;1mEducation Load (0.3ms)[0m   [0mSELECT * FROM "educations" WHERE ((user_id =31) AND (type_education ='graduate')) [0m
+  [4;36;1mCompany Load (0.5ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendered shared/_admin_navigation (17.9ms)
+Rendered shared/_human_resources (1.6ms)
+Rendered shared/_navigation (22.2ms)
+Completed in 233ms (View: 34, DB: 3) | 200 OK [http://localhost/users/login/educations]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-12-25 13:28:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"company-name", "controller"=>"companies"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE (companies.cached_slug = 'company-name') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering companies/show
+Rendered shared/_notice (0.3ms)
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (151.6ms)
+Rendered shared/_human_resources (2.0ms)
+Rendered shared/_navigation (156.4ms)
+Completed in 210ms (View: 165, DB: 2) | 200 OK [http://localhost/companies/company-name]
+
+
+Processing CompaniesController#edit (for 127.0.0.1 at 2010-12-25 13:28:17) [GET]
+  Parameters: {"action"=>"edit", "id"=>"company-name", "controller"=>"companies"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE (companies.cached_slug = 'company-name') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering companies/edit
+Rendered shared/_notice (0.2ms)
+  [4;35;1mCompany Load (0.6ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (23.7ms)
+Rendered shared/_human_resources (1.6ms)
+Rendered shared/_navigation (28.1ms)
+Completed in 226ms (View: 41, DB: 2) | 200 OK [http://localhost/companies/company-name/edit]
+
+
+Processing VacanciesController#index (for 127.0.0.1 at 2010-12-25 13:28:41) [GET]
+  Parameters: {"action"=>"index", "company_id"=>"company-name", "controller"=>"vacancies"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;35;1mVacancy Load (0.4ms)[0m   [0mSELECT * FROM "vacancies" WHERE ("vacancies".company_id = 20) [0m
+Rendering template within layouts/application
+Rendering vacancies/index
+Rendered shared/_notice (0.2ms)
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (22.5ms)
+Rendered shared/_human_resources (1.5ms)
+Rendered shared/_navigation (26.9ms)
+Completed in 101ms (View: 38, DB: 2) | 200 OK [http://localhost/companies/company-name/vacancies]
+
+
+Processing VacanciesController#new (for 127.0.0.1 at 2010-12-25 13:28:43) [GET]
+  Parameters: {"action"=>"new", "company_id"=>"company-name", "controller"=>"vacancies"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering vacancies/new
+Rendered shared/_notice (0.2ms)
+Rendered vacancies/_form (9.4ms)
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (155.7ms)
+Rendered shared/_human_resources (1.5ms)
+Rendered shared/_navigation (159.8ms)
+Completed in 245ms (View: 186, DB: 2) | 200 OK [http://localhost/companies/company-name/vacancies/new]
+
+
+Processing VacanciesController#create (for 127.0.0.1 at 2010-12-25 13:28:49) [POST]
+  Parameters: {"commit"=>"Add", "action"=>"create", "authenticity_token"=>"bLfYa95WvvVr8lImqjKP+Ge/pqa7DRusiMxy1IQ+uaQ=", "vacancy"=>{"remuneration"=>"", "vacancy_date(1i)"=>"2010", "vacancy_date(2i)"=>"12", "area"=>"", "vacancy_date(3i)"=>"25", "job"=>"", "concerns"=>""}, "company_id"=>"company-name", "controller"=>"vacancies"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mCompany Load (0.5ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;36;1mVacancy Create (0.5ms)[0m   [0;1mINSERT INTO "vacancies" ("created_at", "remuneration", "updated_at", "area", "company_id", "job", "vacancy_date", "concerns") VALUES('2010-12-25 16:28:49', NULL, '2010-12-25 16:28:49', '', 20, '', '2010-12-25', '')[0m
+Redirected to http://localhost:3000/companies/company-name/vacancies
+Completed in 294ms (DB: 2) | 302 Found [http://localhost/companies/company-name/vacancies]
+
+
+Processing VacanciesController#index (for 127.0.0.1 at 2010-12-25 13:28:49) [GET]
+  Parameters: {"action"=>"index", "company_id"=>"company-name", "controller"=>"vacancies"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;35;1mVacancy Load (0.5ms)[0m   [0mSELECT * FROM "vacancies" WHERE ("vacancies".company_id = 20) [0m
+Rendering template within layouts/application
+Rendering vacancies/index
+Rendered shared/_notice (0.4ms)
+
+ActionView::TemplateError (undefined method `area_id' for #<Vacancy:0x7f51d3e2ad20>) on line #19 of app/views/vacancies/index.html.erb:
+16:   <tbody>
+17:     <% @vacancies.each do |v| %>
+18:       <tr>
+19:         <td><%= v.area_id %></td>
+20:         <td><%= v.job_id %></td>
+21:         <td><%= v.vacancy_date %></td>
+22:         <td><%= link_to 'View Competencies', '#' %></td>
+
+    app/views/vacancies/index.html.erb:19
+    app/views/vacancies/index.html.erb:17:in `each'
+    app/views/vacancies/index.html.erb:17
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:105:in `retrieve_response_from_mimes'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:183:in `default_render'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:124:in `to_html'
+    responders (0.4.7) lib/responders/flash_responder.rb:93:in `to_html'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `send'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:117:in `respond'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/responder.rb:110:in `call'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/legacy/respond_to.rb:67:in `respond_with'
+    /home/pablo/.rvm/gems/ruby-1.8.7-p302@competency/gems/inherited_resources-1.0.6/lib/inherited_resources/actions.rb:7:in `index'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing VacanciesController#index (for 127.0.0.1 at 2010-12-25 13:29:22) [GET]
+  Parameters: {"action"=>"index", "company_id"=>"company-name", "controller"=>"vacancies"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;36;1mVacancy Load (0.4ms)[0m   [0;1mSELECT * FROM "vacancies" WHERE ("vacancies".company_id = 20) [0m
+Rendering template within layouts/application
+Rendering vacancies/index
+Rendered shared/_notice (0.2ms)
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (147.9ms)
+Rendered shared/_human_resources (1.7ms)
+Rendered shared/_navigation (152.4ms)
+Completed in 228ms (View: 168, DB: 2) | 200 OK [http://localhost/companies/company-name/vacancies]
+
+
+Processing VacanciesController#new (for 127.0.0.1 at 2010-12-25 13:30:04) [GET]
+  Parameters: {"action"=>"new", "company_id"=>"company-name", "controller"=>"vacancies"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering vacancies/new
+Rendered shared/_notice (0.2ms)
+Rendered vacancies/_form (9.5ms)
+  [4;36;1mRole Load (0.5ms)[0m   [0;1mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (24.9ms)
+Rendered shared/_human_resources (1.6ms)
+Rendered shared/_navigation (29.2ms)
+Completed in 250ms (View: 46, DB: 2) | 200 OK [http://localhost/companies/company-name/vacancies/new]
+
+
+Processing VacanciesController#create (for 127.0.0.1 at 2010-12-25 13:30:19) [POST]
+  Parameters: {"commit"=>"Add", "action"=>"create", "authenticity_token"=>"bLfYa95WvvVr8lImqjKP+Ge/pqa7DRusiMxy1IQ+uaQ=", "vacancy"=>{"remuneration"=>"", "vacancy_date(1i)"=>"2010", "vacancy_date(2i)"=>"12", "area"=>"", "vacancy_date(3i)"=>"25", "job"=>"", "concerns"=>""}, "company_id"=>"company-name", "controller"=>"vacancies"}
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering vacancies/new
+Rendered shared/_notice (0.2ms)
+Rendered vacancies/_form (21.0ms)
+  [4;35;1mRole Load (0.6ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (144.6ms)
+Rendered shared/_human_resources (1.9ms)
+Rendered shared/_navigation (149.3ms)
+Completed in 385ms (View: 177, DB: 2) | 200 OK [http://localhost/companies/company-name/vacancies]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-25 13:30:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/error-icon.png" with {:method=>:get}):
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/pablo/.rvm/rubies/ruby-1.8.7-p302/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing VacanciesController#index (for 127.0.0.1 at 2010-12-25 13:31:40) [GET]
+  Parameters: {"action"=>"index", "company_id"=>"company-name", "controller"=>"vacancies"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;36;1mVacancy Load (0.5ms)[0m   [0;1mSELECT * FROM "vacancies" WHERE ("vacancies".company_id = 20) [0m
+Rendering template within layouts/application
+Rendering vacancies/index
+Rendered shared/_notice (0.2ms)
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (23.4ms)
+Rendered shared/_human_resources (1.5ms)
+Rendered shared/_navigation (27.4ms)
+Completed in 239ms (View: 36, DB: 2) | 200 OK [http://localhost/companies/company-name/vacancies]
+
+
+Processing CompaniesController#show (for 127.0.0.1 at 2010-12-25 13:32:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"company-name", "controller"=>"companies"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '31') LIMIT 1[0m
+  [4;35;1mCompany Load (0.4ms)[0m   [0mSELECT * FROM "companies" WHERE (companies.cached_slug = 'company-name') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering companies/show
+Rendered shared/_notice (0.2ms)
+  [4;36;1mCompany Load (0.4ms)[0m   [0;1mSELECT * FROM "companies" WHERE ("companies"."id" = 20) LIMIT 1[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT "roles".* FROM "roles" INNER JOIN "assignments" ON "roles".id = "assignments".role_id WHERE (("assignments".user_id = 31)) [0m
+Rendered shared/_admin_navigation (23.3ms)
+Rendered shared/_human_resources (1.4ms)
+Rendered shared/_navigation (27.3ms)
+Completed in 84ms (View: 35, DB: 2) | 200 OK [http://localhost/companies/company-name]
