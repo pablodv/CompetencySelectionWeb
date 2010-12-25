@@ -1,0 +1,12 @@
+<h1><%= controller.controller_name.titleize %></h1>
+<%= render :partial => 'shared/notice' %>
+<%= link_to_new_resource %>
+<%#= render_filters  %>
+<table width="650" border="0" cellspacing="0" cellpadding="10" >
+  <thead>
+    <tr>
+      <%= render :partial => "header" %>
+    </tr>
+  </thead>
+  <%= render collection %>
+</table>

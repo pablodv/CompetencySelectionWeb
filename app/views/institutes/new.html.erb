@@ -1,9 +1,0 @@
-<h1>New institute</h1>
-<%= render :partial => 'shared/notice' %>
-<div class="app-form">
-  <% form_for @institute do |f| %>
-    <%= f.error_messages %>
-    <%= render :partial => "form", :object => f %>
-    <%= f.submit "Add" %>
-  <% end %>
-</div>

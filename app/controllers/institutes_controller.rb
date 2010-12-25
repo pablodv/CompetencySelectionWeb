@@ -1,6 +1,6 @@
-class InstitutesController < InheritedResources::Base
-  filter_access_to :all
-  respond_to :html
+class InstitutesController < CoreController
+#  filter_access_to :all
+#  respond_to :html
 
 protected
 
