@@ -1,9 +1,9 @@
 <% if permitted_to? :manage, :competencies %>
-  <%= link_to "Competencies", company_competencies_path(current_company) %>
+  <%= link_to "Competencies", competencies_path %>
 <% end %>
 |
 <% if permitted_to? :manage, :vacancies %>
-  <%= link_to "Vacancies", company_vacancies_path(current_company) %>
+  <%= link_to "Vacancies", vacancies_path %>
 <% end %>
 
 <br/>

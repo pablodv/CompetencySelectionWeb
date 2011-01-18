@@ -1,0 +1,16 @@
+<%= render :partial => 'shared/notice' %>
+<div class="app-form">
+  <% form_for @specialty do |f| %>
+    <%= f.error_messages %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :level %>
+      <%= f.select :level, Institute::LEVEL, {:include_blank => 'Select a level'}  %>
+    </div>
+    <%= f.submit "Add" %> | <%= link_to 'Cancel', collection_path %>
+  <% end %>
+</div>
+

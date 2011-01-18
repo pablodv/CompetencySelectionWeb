@@ -2,7 +2,7 @@ module CoreHelper
 
   def link_to_new_resource
     if new_action_defined?
-      link_to("New #{resource_class.human_name}", new_resource_path, :class => "new-resource")
+      link_to("New #{resource_class.human_name}", new_resource_url)
     end
   end
 

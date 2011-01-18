@@ -3,67 +3,7 @@
 <div class="app-form">
   <% form_for @user, :html => { :multipart => true }  do |f| %>
     <%= f.error_messages %>
-    <div class="field">
-      <%= f.label :first_name %>
-      <%= f.text_field :first_name %>
-    </div>
-    <div class="field">
-      <%= f.label :last_name %>
-      <%= f.text_field :last_name %>
-    </div>
-    <div class="field">
-      <%= f.label :dni %>
-      <%= f.text_field :dni %>
-    </div>
-    <div class="field">
-      <%= f.label :birthday %>
-      <%= f.date_select :birthday %>
-    </div>
-    <div class="field">
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-    </div>
-    <div class="field">
-      <%= f.label :photo %>
-      <%= f.file_field :photo %>
-    </div>
-    <div class="field">
-      <%= f.label :gender %>
-      <%= f.select :gender, User::GENDER, {:include_blank => 'Select a gender'} %>
-    </div>
-    <div class="field">
-      <%= f.label :marital_status %>
-      <%= f.select :marital_status, User::STATUS, {:include_blank => 'Select a status'} %>
-    </div>
-    <div class="field">
-      <%= f.label :address %>
-      <%= f.text_field :address %>
-    </div>
-    <div class="field">
-      <%= f.label :phone %>
-      <%= f.text_field :phone %>
-    </div>
-    <div class="field">
-      <%= f.label :mobile_phone %>
-      <%= f.text_field :mobile_phone %>
-    </div>
-    <div class="field">
-      <%= f.label :country_id %>
-      <%= f.select :country_id, User::COUNTRY, {:include_blank => 'Select a country'} %>
-    </div>
-    <div class="field">
-      <%= f.label :state_id %>
-      <%= f.select :state_id, User::STATE, {:include_blank => 'Select a state'} %>
-    </div>
-    <% if permitted_to? :index, current_user %>
-      <div class="field">
-        <%= f.label :roles %>
-        <% for role in Role.all %>
-          <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
-          <%= role.name %>
-        <% end %>
-      </div>
-    <% end %>
+    <%= render :partial => "form", :object => f, :locals => {:register => false, :editing => true} %>
     <%= f.submit "Update" %> | <%= link_to 'Cancel', user_path(current_user) %>
   <% end %>
 </div>

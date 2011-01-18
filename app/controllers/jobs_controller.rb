@@ -1,18 +1,16 @@
-class JobsController < InheritedResources::Base
-  filter_access_to :all
-  respond_to :html
+class JobsController < CoreController
 
-  def create
-    create! do |format|
-      format.html { redirect_to user_jobs_path }
-    end
-  end
-
-  def update
-    update! do |format|
-      format.html { redirect_to user_jobs_path }
-    end
-  end
+#  def create
+#    create! do |format|
+#      format.html { redirect_to user_jobs_path }
+#    end
+#  end
+#
+#  def update
+#    update! do |format|
+#      format.html { redirect_to user_jobs_path }
+#    end
+#  end
 
  protected
 

@@ -22,7 +22,7 @@ Rails::Initializer.run do |config|
   config.gem "authlogic",           :version => '2.1.6'
   config.gem "has_scope",           :version => '0.5.0'
   config.gem "responders",          :version => '0.4.7'
-  config.gem "inherited_resources", :version => '1.0.6'
+  #config.gem "inherited_resources", :version => '1.0.6'
   config.gem 'will_paginate',       :version => '~> 2.3.11', :source => 'http://gemcutter.org'
   config.gem "declarative_authorization",                    :source => "http://gemcutter.org"
   config.gem "friendly_id",         :version => "~> 3.1"

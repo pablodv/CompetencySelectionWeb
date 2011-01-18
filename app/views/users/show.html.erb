@@ -1,19 +1,19 @@
 <h1></h1>
 <%= render :partial => 'shared/notice' %>
 <%= image_tag @user.photo.url(:small) %><br/>
-<b>Login:</b>  <%= @user.login %><br/>
-<b>First Name:</b> <%= @user.first_name %><br/>
-<b>Last Name:</b>  <%= @user.last_name %><br/>
-<b>DNI:</b>  <%= @user.dni %><br/>
-<b>Email:</b>  <%= @user.email %><br/>
-<b>Gender:</b>  <%= @user.gender %><br/>
-<b>Marital status:</b>  <%= @user.marital_status %><br/>
-<b>Address:</b>  <%= @user.address %><br/>
-<b>Phone:</b>  <%= @user.phone%><br/>
-<b>Mobile Phone:</b>  <%= @user.mobile_phone %><br/>
-<b>Country:</b>  <%= @user.country_id %><br/>
-<b>State:</b>  <%= @user.state_id %><br/>
-<b>Role:</b>
+<span class="show">Login:</span><%= @user.login %><br/>
+<span class="show">First Name:</span><%= @user.first_name %><br/>
+<span class="show">Last Name:</span><%= @user.last_name %><br/>
+<span class="show">DNI:</span><%= @user.dni %><br/>
+<span class="show">Email:</span><%= @user.email %><br/>
+<span class="show">Gender:</span><%= @user.gender %><br/>
+<span class="show">Marital status:</span><%= @user.marital_status %><br/>
+<span class="show">Address:</span><%= @user.address %><br/>
+<span class="show">Phone:</span><%= @user.phone%><br/>
+<span class="show">Mobile Phone:</span><%= @user.mobile_phone %><br/>
+<span class="show">Country:</span><%= @user.country_id %><br/>
+<span class="show">State:</span><%= @user.state_id %><br/>
+<span class="show">Role:</span>
 <% @user.roles.each do |role| %>
   <%= role.name %>
 <% end %>

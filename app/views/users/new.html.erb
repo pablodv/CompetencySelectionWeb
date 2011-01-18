@@ -1,8 +1,9 @@
-<h1></h1>
+<h1>Invite</h1>
 <%= render :partial => 'shared/notice' %>
 <div class="app-form">
   <% form_for @user do |f| %>
-    <%= render :partial => "form", :object => f, :locals => {:register => false} %>
+    <%= f.error_messages %>
+    <%= render :partial => "form", :object => f, :locals => {:register => false, :editing => false} %>
     <%= f.submit 'Invite' %>
     |
     <%= link_to 'cancel', welcome_path %>

@@ -1,0 +1,22 @@
+<%#*<h1></h1>%>
+<%#= render :partial => 'shared/notice' %>
+<%#= link_to 'Add', new_user_job_path %><br/>
+
+<%# @jobs.each do |job| %>
+  <%#= job.company %>
+  <%#= job.employment %>
+  <%#= job.description %>
+  <%#= job.date_from.strftime("%d/%m/%Y") %>
+  <%#= job.date_until.strftime("%d/%m/%Y") %>
+  <%#= link_to 'Edit', edit_user_job_path(current_user, job) %> |
+  <%#= link_to 'Delete',[current_user, job], :method => :delete, :confirm => "Are you sure?" %>
+<%# end %>
+<tr class='<%= cycle('gray', nil) %>'>
+  <td><%= item.description %></td>
+  <td><%= item.weighted %></td>
+  <td>
+    <%= link_to 'Edit', edit_competency_item_path(@competency, item) %>
+    <span> | </span>
+    <%= link_to 'Delete', competency_item_path(@competency, item), :method => :delete, :confirm => "Are you sure?" %>
+  </td>
+</tr>

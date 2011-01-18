@@ -1,0 +1,9 @@
+<tr class='<%= cycle('gray', nil) %>'>
+  <td><%= specialty.name %></td>
+  <td><%= specialty.level %></td>
+  <td>
+    <%= link_to 'Edit', edit_specialty_path(specialty) %>
+    <span> | </span>
+    <%= link_to 'Delete', specialty, :method => :delete, :confirm => "Are you sure?" %>
+  </td>
+</tr>

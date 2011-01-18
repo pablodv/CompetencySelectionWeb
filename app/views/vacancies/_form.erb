@@ -1,21 +1,26 @@
-<%= form.error_messages %>
-<div class="field">
-  <%= form.label :area %>
-  <%= form.text_field :area %>
-</div>
-<div class="field">
-  <%= form.label :job %>
-  <%= form.text_field :job %>
-</div>
-<div class="field">
-  <%= form.label :remuneration %>
-  <%= form.text_field :remuneration %>
-</div>
-<div class="field">
-  <%= form.label :vacancy_date%>
-  <%= form.date_select :vacancy_date %>
-</div>
-<div class="field">
-  <%= form.label :concerns %>
-  <%= form.text_area :concerns %>
+<div class="app-form">
+  <% form_for @vacancy do |f| %>
+    <%= f.error_messages %>
+    <div class="field">
+      <%= f.label :area %>
+      <%= f.text_field :area %>
+    </div>
+    <div class="field">
+      <%= f.label :job %>
+      <%= f.text_field :job %>
+    </div>
+    <div class="field">
+      <%= f.label :remuneration %>
+      <%= f.text_field :remuneration %>
+    </div>
+    <div class="field">
+      <%= f.label :vacancy_date%>
+      <%= f.date_select :vacancy_date %>
+    </div>
+    <div class="field">
+      <%= f.label :concerns %>
+      <%= f.text_area :concerns %>
+    </div>
+    <%= f.submit "Add" %> | <%= link_to 'Cancel', vacancies_path %>
+  <% end %>
 </div>

@@ -1,13 +1,19 @@
-<%= form.error_messages %>
-<div class="field">
-  <%= form.label :name %>
-  <%= form.text_field :name %>
+<div class="app-form">
+  <% form_for @competency do |f| %>
+    <%= f.error_messages %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+    <div class="field">
+      <%= f.label :weighted %>
+      <%= f.text_field :weighted %>
+    </div>
+    <%= f.submit "Add" %> | <%= link_to 'Cancel', competencies_path %>
+  <% end %>
 </div>
-<div class="field">
-  <%= form.label :description %>
-  <%= form.text_area :description %>
-</div>
-<div class="field">
-  <%= form.label :weighted %>
-  <%= form.text_field :weighted %>
-</div>
+

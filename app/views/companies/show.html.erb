@@ -1,7 +1,8 @@
-<h1></h1>
+<h1><%= current_company.name %></h1>
 <%= render :partial => 'shared/notice' %>
-Company Name<%= current_company.name %><br/>
-Website<%= current_company.website %><br/>
-Login<%= current_company.login %><br/>
+<span class="show">Website</span><%= current_company.website %><br/>
+<span class="show">Login</span><%= current_company.login %><br/>
+<span class="show">Street</span><br/>
+<span class="show">Phone</span><br/>
 
 <%= link_to "Edit", edit_company_path(current_company) %>

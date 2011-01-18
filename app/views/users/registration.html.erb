@@ -2,7 +2,8 @@
 <%= render :partial => 'shared/notice' %>
 <div class="app-form">
   <% form_for @user do |f| %>
-    <%= render :partial => "form", :object => f, :locals => {:register => true} %>
+    <%= f.error_messages %>
+    <%= render :partial => "form", :object => f, :locals => {:register => true, :editing => false} %>
     <%= f.submit 'Register' %> | <%= link_to 'Back', root_url %>
   <% end %>
 

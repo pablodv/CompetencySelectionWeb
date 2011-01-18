@@ -1,6 +1,4 @@
 class InstitutesController < CoreController
-#  filter_access_to :all
-#  respond_to :html
 
 protected
 

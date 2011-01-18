@@ -1,38 +1,93 @@
 <%= form.error_messages %>
+
 <% if register %>
   <h1>Register your company</h1>
   <% form.fields_for :company_attributes, @user.company do |company_form|%>
-<div class="field">
-    <%= company_form.label :name %>
-    <%= company_form.text_field :name %>
-</div>
-<div class="field">
-    <%= company_form.label :login, "Company Login" %>
-    <%= company_form.text_field :login %>
-</div>
+    <div class="field">
+      <%= company_form.label :name %>
+      <%= company_form.text_field :name %>
+    </div>
+    <div class="field">
+      <%= company_form.label :login, "Company Login" %>
+      <%= company_form.text_field :login %>
+    </div>
   <% end %>
 <% end %>
+
 <div class="field">
-<%= form.label :first_name %>
-<%= form.text_field :first_name %>
+  <%= form.label :first_name %>
+  <%= form.text_field :first_name %>
 </div>
 <div class="field">
-<%= form.label :last_name %>
-<%= form.text_field :last_name %>
+  <%= form.label :last_name %>
+  <%= form.text_field :last_name %>
 </div>
 <div class="field">
-<%= form.label :login %>
-<%= form.text_field :login %>
+  <%= form.label :login %>
+  <%= form.text_field :login %>
 </div>
 <div class="field">
-<%= form.label :email %>
-<%= form.text_field :email %>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
 </div>
-<div class="field">
-<%= form.label :password, form.object.new_record? ? nil : "Change password" %>
-<%= form.password_field :password %>
-</div>
-<div class="field">
-<%= form.label :password_confirmation %>
-<%= form.password_field :password_confirmation %>
-</div>
+
+<% if editing %>
+  <div class="field">
+    <%= form.label :dni %>
+    <%= form.text_field :dni %>
+  </div>
+  <div class="field">
+    <%= form.label :birthday %>
+    <%= form.date_select :birthday %>
+  </div>
+  <div class="field">
+    <%= form.label :photo %>
+    <%= form.file_field :photo %>
+  </div>
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.select :gender, User::GENDER, {:include_blank => 'Select a gender'} %>
+  </div>
+  <div class="field">
+    <%= form.label :marital_status %>
+    <%= form.select :marital_status, User::STATUS, {:include_blank => 'Select a status'} %>
+  </div>
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= form.label :mobile_phone %>
+    <%= form.text_field :mobile_phone %>
+  </div>
+  <div class="field">
+    <%= form.label :country_id %>
+    <%= form.select :country_id, User::COUNTRY, {:include_blank => 'Select a country'} %>
+  </div>
+  <div class="field">
+    <%= form.label :state_id %>
+    <%= form.select :state_id, User::STATE, {:include_blank => 'Select a state'} %>
+  </div>
+  <% if permitted_to? :index, current_user %>
+    <div class="field">
+      <%= form.label :roles %>
+      <% for role in Role.all %>
+        <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+        <%= role.name %>
+      <% end %>
+    </div>
+  <% end %>
+<% else %>
+  <div class="field">
+    <%= form.label :password, form.object.new_record? ? nil : "Change password" %>
+    <%= form.password_field :password %>
+  </div>
+  <div class="field">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation %>
+  </div>
+<% end %>

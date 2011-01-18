@@ -3032,6 +3032,7 @@ iframe.ie6_blocker {
 }
 
 /* style for labels */
+span.show { font-weight: bold; margin-right: 5px;}
 span.label_name {
   -moz-background-clip:border;
   -moz-background-inline-policy:continuous;

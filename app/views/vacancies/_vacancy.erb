@@ -1,0 +1,8 @@
+<tr class='<%= cycle('gray', nil) %>'>
+  <td><%= vacancy.area %></td>
+  <td><%= vacancy.job %></td>
+  <td><%= vacancy.vacancy_date %></td>
+  <td><%= link_to 'View Competencies', '#' %></td>
+  <td><%= link_to 'Edit', edit_vacancy_path(vacancy) %></td>
+  <td><%#= link_to 'Delete',[current_company, c], :method => :delete, :confirm => "Are you sure?" %></td>
+</tr>

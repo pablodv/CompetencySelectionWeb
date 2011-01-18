@@ -1,0 +1,11 @@
+<tr class='<%= cycle('gray', nil) %>'>
+  <td><%= competency.name %></td>
+  <td><%= competency.description %></td>
+  <td><%= competency.weighted %></td>
+  <td><%= link_to 'View Items', competency_items_path(competency) %></td>
+  <td>
+    <%= link_to 'Edit', edit_competency_path(competency) %>
+    <span> | </span>
+    <%= link_to 'Delete', competency, :method => :delete, :confirm => "Are you sure?" %>
+  </td>
+</tr>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101223231354) do
+ActiveRecord::Schema.define(:version => 20101226220830) do
 
   create_table "assignments", :force => true do |t|
     t.integer  "user_id"
@@ -93,8 +93,15 @@ ActiveRecord::Schema.define(:version => 20101223231354) do
   add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
 
-# Could not dump table "specialties" because of following StandardError
-#   Unknown type 'level' for column 'type'
+  create_table "specialties", :id => false, :force => true do |t|
+    t.integer  "id",           :null => false
+    t.string   "name"
+    t.integer  "institute_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "company_id"
+    t.string   "level"
+  end
 
   create_table "types", :force => true do |t|
     t.string   "name"

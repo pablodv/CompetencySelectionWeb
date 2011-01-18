@@ -1,0 +1,9 @@
+<h1>Edit job</h1>
+<%= render :partial => 'shared/notice' %>
+<div class="app-form">
+  <% form_for [current_user, @job] do |f| %>
+    <%= f.error_messages %>
+    <%= render :partial => 'form', :object => f %>
+    <%= f.submit 'Update' %> | <%= link_to 'Cancel', user_jobs_path(current_user) %>
+  <% end %>
+</div>
