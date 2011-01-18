@@ -1,6 +1,6 @@
 <%= render :partial => 'shared/notice' %>
 <div class="app-form">
-  <% form_for @item, :url => { :controller => 'items' } do |f| %>
+  <% form_for [@competency,@item] do |f| %>
     <%= f.error_messages %>
      <div class="field">
       <%= f.label :description %>
