@@ -1,6 +1,7 @@
 <tr class='<%= cycle('gray', nil) %>'>
+  <td><%= competency.type %></td>
   <td><%= competency.name %></td>
-  <td><%= competency.description %></td>
+  <td><%= competency.definition %></td>
   <td><%= competency.weighted %></td>
   <td><%= link_to 'View Items', competency_items_path(competency) %></td>
   <td>

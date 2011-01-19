@@ -2,7 +2,7 @@ class Competency < ActiveRecord::Base
   has_many :items
   belongs_to :company
 
-  validates_presence_of   :name, :description, :weighted
+  validates_presence_of   :type, :name, :definition, :weighted
   validates_uniqueness_of :name
   validate :weighted_must_be_at_least_a_cent
   validate :weighted_total
