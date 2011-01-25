@@ -50,7 +50,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :companies
   map.resources :vacancies
   map.resources :competencies do |competency|
-    competency.resources :items
+    competency.resources :behaviors
   end
   map.resources :institutes
   map.resources :specialties

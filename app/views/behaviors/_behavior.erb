@@ -1,0 +1,9 @@
+<tr class='<%= cycle('gray', nil) %>'>
+  <td><%= behavior.description %></td>
+  <td><%= behavior.weighted %></td>
+  <td>
+    <%= link_to 'Edit', edit_competency_behavior_path(@competency, behavior) %>
+    <span> | </span>
+    <%= link_to 'Delete', competency_behavior_path(@competency, behavior), :method => :delete, :confirm => "Are you sure?" %>
+  </td>
+</tr>

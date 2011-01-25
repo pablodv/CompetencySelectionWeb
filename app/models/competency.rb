@@ -1,5 +1,5 @@
 class Competency < ActiveRecord::Base
-  has_many :items
+  has_many :behaviors
   belongs_to :company
 
   validates_presence_of   :type, :name, :definition, :weighted
