@@ -1,6 +1,6 @@
 authorization do
   role :admin do
-    has_permission_on [:institutes, :specialties, :roles, :jobs, :competencies, :behaviors, :vacancies, :companies], :to => :manage
+    has_permission_on [:institutes, :specialties, :roles, :jobs, :competencies, :behaviors, :vacancies, :companies, :areas], :to => :manage
     has_permission_on :educations, :to => :manage_educations
     has_permission_on :users, :to => :manage_users
   end
@@ -21,7 +21,7 @@ authorization do
   end
 
   role :human_resource do
-    has_permission_on :vacancies, :to => :manage
+    has_permission_on [:competencies, :behaviors, :vacancies], :to => :manage
   end
   
   role :guest do

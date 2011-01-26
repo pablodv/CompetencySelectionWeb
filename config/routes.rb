@@ -33,7 +33,7 @@ ActionController::Routing::Routes.draw do |map|
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   # map.root :controller => "welcome"
 
-  # See how all your routes lay out with "rake routes"
+  # See how all your routes lay out with "rake routes"Human Rosource
 
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
@@ -41,20 +41,30 @@ ActionController::Routing::Routes.draw do |map|
   #map.root :controller => "user_sessions", :action => "new"
 
   map.root :controller => 'user_sessions', :action => 'new'
-  map.registration 'registration', :controller => 'users', :action => 'registration'
-  map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
-  map.welcome 'welcome', :controller => 'welcome', :action => 'index'
 
+  map.registration 'registration', :controller => 'users', :action => 'registration'
+  map.register    '/register/:activation_code', :controller => 'activations', :action => 'new'
+  map.activate    '/activate/:id', :controller => 'activations', :action => 'create'
+
+  map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
   map.resource :user_sessions
 
+  map.welcome 'welcome', :controller => 'welcome', :action => 'index'
+
+  # Company ROUTES
   map.resources :companies
+  map.resources :areas
+  map.resources :institutes
+  map.resources :specialties
+
+  # Human Rosource ROUTES
   map.resources :vacancies
   map.resources :competencies do |competency|
     competency.resources :behaviors
   end
-  map.resources :institutes
-  map.resources :specialties
 
+
+  # Profile ROUTES
   map.resources :users do |user|
     user.resources :educations
     user.resources :jobs
@@ -62,9 +72,4 @@ ActionController::Routing::Routes.draw do |map|
     user.specialty_type_education 'educations/specialty_type_education/:type', :controller => :educations, :action => :specialty_type_education
   end
 
-  map.register    '/register/:activation_code', :controller => 'activations', :action => 'new'
-  map.activate    '/activate/:id', :controller => 'activations', :action => 'create'
-
-  #  map.connect ':controller/:action/:id'
-  #  map.connect ':controller/:action/:id.:format'
 end

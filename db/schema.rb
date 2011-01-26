@@ -13,6 +13,7 @@ ActiveRecord::Schema.define(:version => 20110126223332) do
 
   create_table "areas", :force => true do |t|
     t.string   "name"
+    t.integer  "company_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
