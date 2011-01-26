@@ -9,7 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110126001319) do
+ActiveRecord::Schema.define(:version => 20110126223332) do
+
+  create_table "areas", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "assignments", :force => true do |t|
     t.integer  "user_id"
@@ -57,6 +63,13 @@ ActiveRecord::Schema.define(:version => 20110126001319) do
     t.datetime "updated_at"
   end
 
+  create_table "departaments", :force => true do |t|
+    t.string   "name"
+    t.integer  "area_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "educations", :force => true do |t|
     t.integer  "user_id"
     t.integer  "institute_id"
@@ -99,6 +112,13 @@ ActiveRecord::Schema.define(:version => 20110126001319) do
 
   create_table "roles", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sections", :force => true do |t|
+    t.string   "name"
+    t.integer  "departament_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
