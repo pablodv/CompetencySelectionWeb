@@ -1,6 +1,7 @@
 class Competency < ActiveRecord::Base
   has_many :behaviors
   belongs_to :company
+  has_and_belongs_to_many :job_competency_profiles
 
   validates_presence_of   :type, :name, :definition, :weighted
   validates_uniqueness_of :name

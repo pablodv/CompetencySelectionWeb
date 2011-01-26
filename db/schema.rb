@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110120013327) do
+ActiveRecord::Schema.define(:version => 20110126001319) do
 
   create_table "assignments", :force => true do |t|
     t.integer  "user_id"
@@ -45,6 +45,18 @@ ActiveRecord::Schema.define(:version => 20110120013327) do
     t.string   "type"
   end
 
+  create_table "competencies_job_competency_profile", :id => false, :force => true do |t|
+    t.integer "competency_id"
+    t.integer "job_competency_profile_id"
+  end
+
+  create_table "competencies_job_competency_profiles", :id => false, :force => true do |t|
+    t.integer  "competency_id"
+    t.integer  "job_competency_profile_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "educations", :force => true do |t|
     t.integer  "user_id"
     t.integer  "institute_id"
@@ -63,6 +75,15 @@ ActiveRecord::Schema.define(:version => 20110120013327) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "company_id"
+  end
+
+  create_table "job_competency_profiles", :force => true do |t|
+    t.string   "name"
+    t.integer  "area_id"
+    t.integer  "departament_id"
+    t.integer  "section_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "jobs", :force => true do |t|
