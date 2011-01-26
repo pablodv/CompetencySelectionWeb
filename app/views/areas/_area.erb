@@ -1,0 +1,8 @@
+<tr class='<%= cycle('gray', nil) %>'>
+  <td><%= area.name %></td>
+  <td>
+    <%= link_to 'Edit', edit_area_path(area) %>
+    <span> | </span>
+    <%= link_to 'Delete', area_path(area), :method => :delete, :confirm => "Are you sure?" %>
+  </td>
+</tr>

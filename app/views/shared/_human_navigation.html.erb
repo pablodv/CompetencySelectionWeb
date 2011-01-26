@@ -1,0 +1,11 @@
+<% if permitted_to? :manage, :competencies %>
+  <%= link_to "Competencies", competencies_path %>
+<% end %>
+|
+<% if permitted_to? :manage, :vacancies %>
+  <%= link_to "Vacancies", vacancies_path %>
+<% end %>
+
+<br/>
+
+
