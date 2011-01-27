@@ -1,5 +1,6 @@
 <tr class='<%= cycle('gray', nil) %>'>
   <td><%= area.name %></td>
+  <td><%= link_to 'View Departaments', area_departaments_path(area) %></td>
   <td>
     <%= link_to 'Edit', edit_area_path(area) %>
     <span> | </span>

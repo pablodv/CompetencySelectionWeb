@@ -1,6 +1,7 @@
 authorization do
   role :admin do
-    has_permission_on [:institutes, :specialties, :roles, :jobs, :competencies, :behaviors, :vacancies, :companies, :areas], :to => :manage
+    has_permission_on [:institutes, :specialties, :roles, :jobs, :competencies, 
+      :behaviors, :vacancies, :companies, :areas, :departaments], :to => :manage
     has_permission_on :educations, :to => :manage_educations
     has_permission_on :users, :to => :manage_users
   end

@@ -53,7 +53,11 @@ ActionController::Routing::Routes.draw do |map|
 
   # Company ROUTES
   map.resources :companies
-  map.resources :areas
+  map.resources :areas do |area|
+    area.resources :departaments do |departament|
+      departament.resources :sections
+    end
+  end
   map.resources :institutes
   map.resources :specialties
 
