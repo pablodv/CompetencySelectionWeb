@@ -1,0 +1,25 @@
+<%= render :partial => 'shared/notice' %>
+<div class="app-form">
+  <% form_for resource do |f| %>
+    <%= f.error_messages %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :area_id %>
+      <%= f.select :area_id, options_from_collection_for_select(@area, 'id', 'name'), {:prompt => 'Select a value please...'} %>
+    </div>
+    <div class="field">
+      <%= f.label :departament_id %>
+      <%= f.select :departament_id, options_from_collection_for_select(@departament, 'id', 'name'), {:prompt => 'Select a value please...'} %>
+    </div>
+    <div class="field">
+      <%#= f.label :name %>
+      <%#= f.select :name %>
+    </div>
+    <%= hidden_field(:job_competency_profile, :competencies)%>
+    <%= f.submit "Add" %> | <%= link_to 'Cancel', collection_path(resource) %>
+  <% end %>
+</div>
+<%= jquery_onready "selectCascadeDepartament();" %>

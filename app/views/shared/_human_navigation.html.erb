@@ -5,6 +5,10 @@
 <% if permitted_to? :manage, :vacancies %>
   <%= link_to "Vacancies", vacancies_path %>
 <% end %>
+|
+<% if permitted_to? :manage, :job_competency_profiles %>
+  <%= link_to "Job Competency Profiles", job_competency_profiles_path %>
+<% end %>
 
 <br/>
 

@@ -6,6 +6,39 @@ function appearNotice() {
   setTimeout("$('#notice').fadeOut(5000);", 2000);
 }
 
+function selectCascadeDepartament(){
+    $("select#job_competency_profile_area_id").change(function(){
+      var id_value_string = jQuery(this).val();
+      if (id_value_string == "") {
+         $("select#job_competency_profile_departament_id option").remove();
+         var row = "<option value=\"" + "" + "\">" + "Select a value please..." + "</option>";
+         $(row).appendTo("select#job_competency_profile_departament_id");
+      }
+      else {
+        $.ajax({
+          dataType: "json",
+          cache: false,
+          url: 'departament_by_area/' + id_value_string,
+          timeout: 2000,
+          error: function(XMLHttpRequest, errorTextStatus, error){
+          alert("Failed to submit : "+ errorTextStatus+" ;"+error);
+          },
+          success: function(data){
+            $("select#job_competency_profile_departament_id option").remove();
+            var row = "<option value=\"" + "" + "\">" + "Select a value please..." + "</option>";
+            $(row).appendTo("select#job_competency_profile_departament_id");
+
+            $.each(data, function(i, j){
+              row = "<option value=\"" + j.departament.id + "\">" + stripHTML(j.departament.name) + "</option>";
+              $(row).appendTo("select#job_competency_profile_departament_id");
+            });
+            //$("select#job_competency_profile_departament_id")[0].highlight();
+            }
+        });
+      };
+    });
+}
+
 function selectCascadeInstitute(){
     $("select#education_type_education").change(function(){
       var id_value_string = jQuery(this).val();

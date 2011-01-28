@@ -5,6 +5,7 @@ class CreateJobCompetencyProfiles < ActiveRecord::Migration
       t.integer :area_id
       t.integer :departament_id
       t.integer :section_id
+      t.integer :company_id
 
       t.timestamps
     end

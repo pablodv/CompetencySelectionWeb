@@ -5,7 +5,7 @@
 </div>
 <div class="field">
   <%= form.label :institute_id %>
-  <%= form.select :institute_id, Institute.find_all_by_level(@education.type_education).collect {|s| [s.name, s.id]}, {:include_blank => 'Select a value please...'} %>
+  <%= form.select :institute_id, Institute.find_all_by_level(@education.type_education).collect { |s| [s.name, s.id] }, {:include_blank => 'Select a value please...'} %>
 </div>
 <div class="field">
   <%= form.label :specialty_id %>

@@ -5,6 +5,7 @@ class Company < ActiveRecord::Base
   has_many :vacancies
   has_many :competencies
   has_many :areas
+  has_many :job_competency_profiles
 
   validates_uniqueness_of :name, :login
   validates_presence_of  :name

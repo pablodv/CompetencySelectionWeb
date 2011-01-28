@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(:version => 20110126223332) do
     t.integer  "area_id"
     t.integer  "departament_id"
     t.integer  "section_id"
+    t.integer  "company_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

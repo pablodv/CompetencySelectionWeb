@@ -1,0 +1,9 @@
+<tr class='<%= cycle('gray', nil) %>'>
+  <td><%= job_competency_profile.name %></td>
+  <td><%#= link_to 'View Departaments', area_departaments_path(area) %></td>
+  <td>
+    <%= link_to 'Edit', edit_job_competency_profile_path(job_competency_profile) %>
+    <span> | </span>
+    <%= link_to 'Delete', job_competency_profile_path(job_competency_profile), :method => :delete, :confirm => "Are you sure?" %>
+  </td>
+</tr>
