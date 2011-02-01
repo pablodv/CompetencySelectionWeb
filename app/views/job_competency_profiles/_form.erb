@@ -15,9 +15,10 @@
       <%= f.select :departament_id, options_from_collection_for_select(@departament, 'id', 'name'), {:prompt => 'Select a value please...'} %>
     </div>
     <div class="field">
-      <%#= f.label :name %>
-      <%#= f.select :name %>
+      <%= f.label "Competencies" %>
+      <%= select_tag "competencies", options_for_select([["Select a value please...","0"]]+@competencies ) %>
     </div>
+    <ul class="competencies_list"></ul>
     <%= hidden_field(:job_competency_profile, :competencies)%>
     <%= f.submit "Add" %> | <%= link_to 'Cancel', collection_path(resource) %>
   <% end %>

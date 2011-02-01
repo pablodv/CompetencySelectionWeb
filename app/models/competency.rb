@@ -3,7 +3,7 @@ class Competency < ActiveRecord::Base
   belongs_to :company
   has_and_belongs_to_many :job_competency_profiles
 
-  validates_presence_of   :type, :name, :definition, :weighted
+  validates_presence_of   :name, :definition, :weighted
   validates_uniqueness_of :name
   validate :weighted_must_be_at_least_a_cent
   validate :weighted_total

@@ -17,5 +17,6 @@ class JobCompetencyProfilesController < CoreController
   def load_collections
     @area = Area.find(:all)
     @departament = Departament.find(:all)
+    @competencies = Competency.find(:all).map { |c| [c.name, c.id] }
   end
 end

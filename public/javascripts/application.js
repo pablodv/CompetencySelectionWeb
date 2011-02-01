@@ -1,9 +1,18 @@
 jQuery(document).ready(function() {
   appearNotice();
+  selectCascadeDepartament();
+  selectCompetencies();
 });
 
 function appearNotice() {
   setTimeout("$('#notice').fadeOut(5000);", 2000);
+}
+
+function selectCompetencies(){
+    $("#competencies").change(function(){
+      if (jQuery(this).val() > 0)
+      {$(".competencies_list").append("<li>"+ $("#competencies option[value='"+ jQuery(this).val() +"']").text() +"</li>");}
+    });
 }
 
 function selectCascadeDepartament(){

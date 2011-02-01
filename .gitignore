@@ -1,6 +1,7 @@
 db/*.sqlite3
 log/*.log
 tmp/**/*
+tmp/
 .rvmrc
 nbproject/
 config/database.yml
