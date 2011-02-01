@@ -19,7 +19,7 @@
       <%= select_tag "competencies", options_for_select([["Select a value please...","0"]]+@competencies ) %>
     </div>
     <ul class="competencies_list"></ul>
-    <%= hidden_field(:job_competency_profile, :competencies)%>
+    <%= hidden_field_tag "competency_ids", nil, :class => :competency_ids, :name => "job_competency_profile[competency_ids][]"%>
     <%= f.submit "Add" %> | <%= link_to 'Cancel', collection_path(resource) %>
   <% end %>
 </div>

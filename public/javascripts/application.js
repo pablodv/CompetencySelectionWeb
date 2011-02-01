@@ -1,7 +1,8 @@
 jQuery(document).ready(function() {
+//  var competency_ids = []
   appearNotice();
   selectCascadeDepartament();
-  selectCompetencies();
+  selectCompetencies(competency_ids);
 });
 
 function appearNotice() {
@@ -10,8 +11,17 @@ function appearNotice() {
 
 function selectCompetencies(){
     $("#competencies").change(function(){
+      var competency_ids = []
       if (jQuery(this).val() > 0)
-      {$(".competencies_list").append("<li>"+ $("#competencies option[value='"+ jQuery(this).val() +"']").text() +"</li>");}
+      {$(".competencies_list").append("<li>"+ $("#competencies option[value='"+ $(this).val() +"']").text() +"</li>");
+       if ($("#competency_ids").val()) { competency_ids.push($("#competency_ids").val()); }
+       console.log(competency_ids);
+       competency_ids.push($(this).val());
+       console.log(competency_ids);
+
+       $("#competency_ids").val(competency_ids);
+//       $("#new_job_competency_profile").append("<input class='competency_ids' name='job_competency_profile[competency_ids][]' type='hidden' value='"+competency_ids+"'>");
+       }
     });
 }
 
