@@ -1,5 +1,7 @@
 <tr class='<%= cycle('gray', nil) %>'>
   <td><%= job_competency_profile.name %></td>
+  <td><%= job_competency_profile.area.name %></td>
+  <td><%= job_competency_profile.departament.name %></td>
   <td><%#= link_to 'View Departaments', area_departaments_path(area) %></td>
   <td>
     <%= link_to 'Edit', edit_job_competency_profile_path(job_competency_profile) %>

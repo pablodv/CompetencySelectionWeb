@@ -18,8 +18,14 @@
       <%= f.label "Competencies" %>
       <%= select_tag "competencies", options_for_select([["Select a value please...","0"]]+@competencies ) %>
     </div>
-    <ul class="competencies_list"></ul>
-    <%= hidden_field_tag "competency_ids", nil, :class => :competency_ids, :name => "job_competency_profile[competency_ids][]"%>
+    <ul class="competencies_list">
+      <% if resource.competencies %>
+        <% resource.competencies.each do |competency| %>
+          <li><%= competency.name %> </li>
+        <% end %>
+      <% end %>
+    </ul>
+  <%= hidden_field_tag "competency_ids", resource.competencies ? resource.competencies.map(&:id) : nil , :name => "job_competency_profile[competency_ids][]"%>
     <%= f.submit "Add" %> | <%= link_to 'Cancel', collection_path(resource) %>
   <% end %>
 </div>

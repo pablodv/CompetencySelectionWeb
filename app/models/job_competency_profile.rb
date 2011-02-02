@@ -3,7 +3,9 @@ class JobCompetencyProfile < ActiveRecord::Base
   belongs_to :area
   belongs_to :departament
 
-  validates_presence_of   :name
+  attr_accessible :name, :area_id, :departament_id, :competency_ids
+
+  validates_presence_of   :name, :area_id
   validates_uniqueness_of :name
 
 end
