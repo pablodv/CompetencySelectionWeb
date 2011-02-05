@@ -8,27 +8,32 @@
     <%= javascript_include_tag "jquery-1.4.2.min", "application" %>
   </head>
   <body>
+    <div class="header">
+      <p class="login">
+        <% if logged_in? %>
+          Welcome <%=h current_user.login %>!
+          <%= link_to "Log out", logout_path %>
+        <% end %>
+      </p>
+    </div>
     <div id="contents">
       <div id="contents-wrapper">
         <div id="container" class="clearfix">
-          <div id="left" class="column"></div>
+
+          <%#*<div id="left" class="column"></div>%>
+
           <div id="center" class="column">
-
-            <% if logged_in? %>
-              <%= render :partial => 'shared/navigation'%>
-            <% end %>
-
             <div id="center-wrapper"><%= yield %></div>
           </div>
 
           <div id="right" class="column">
             <div id="right-wrapper">
               <% if logged_in? %>
-                Welcome <%=h current_user.login %>!
-                <%= link_to "Log out", logout_path %>
+                <%= render :partial => 'shared/navigation'%>
               <% end %>
             </div>
           </div>
+
         </div>
       </div>
     </div>

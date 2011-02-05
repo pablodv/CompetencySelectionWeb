@@ -3094,3 +3094,36 @@ li.on {
 .bold {
   font-weight: bold;
 }
+
+.header {
+  border-top: 1px solid white;
+  border-bottom: 1px solid #AECCD7;
+  background: #EAF2F5 url(/images/smooth-gradient-blue.jpg);
+  width: 100%;
+  min-height: 25px;
+}
+
+.login {
+  padding: 10px;
+}
+
+.navigation {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #AECCD7;
+  background-color: #FFF;
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  -moz-border-radius-topright: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -moz-border-radius-bottomright: 8px;
+}

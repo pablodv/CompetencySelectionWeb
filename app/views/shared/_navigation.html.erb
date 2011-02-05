@@ -1,7 +1,13 @@
-<%= render :partial => 'shared/company_navigation' %>
-<%= render :partial => 'shared/human_navigation' %>
-<%= link_to 'Personal Information', user_path(current_user) %>
-|
-<%= link_to 'Education', [current_user, :educations] %>
-|
-<%= link_to 'Jobs', [current_user, :jobs] %>
+<div class="navigation">
+  <%= render :partial => 'shared/company_navigation' %>
+</div>
+<div class="navigation">
+  <%= render :partial => 'shared/human_navigation' %>
+</div>
+<div class="navigation">
+  <%= link_to 'Personal Information', user_path(current_user) %>
+  |
+  <%= link_to 'Education', [current_user, :educations] %>
+  |
+  <%= link_to 'Jobs', [current_user, :jobs] %>
+</div>
