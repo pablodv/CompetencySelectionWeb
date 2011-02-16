@@ -3,7 +3,7 @@ authorization do
   role :admin do
     has_permission_on [:institutes, :specialties, :roles, :jobs, :competencies, 
       :behaviors, :vacancies, :companies, :areas, :departaments,
-      :job_competency_profiles], :to => :manage
+      :job_competency_profiles, :question], :to => :manage
     has_permission_on :job_competency_profiles, :to => :manage_profile
     has_permission_on :educations, :to => :manage_educations
     has_permission_on :users, :to => :manage_users

@@ -68,6 +68,7 @@ ActionController::Routing::Routes.draw do |map|
   end
   map.resources :job_competency_profiles 
   map.departament_by_area 'job_competency_profiles/departament_by_area/:area_id', :controller => :job_competency_profiles, :action => :departament_by_area
+  map.resources :question_dictionaries 
 
   # Profile ROUTES
   map.resources :users do |user|
