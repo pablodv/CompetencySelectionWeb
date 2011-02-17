@@ -119,7 +119,7 @@ ActiveRecord::Schema.define(:version => 20110210005634) do
   end
 
   create_table "questions", :force => true do |t|
-    t.integer  "question_dictionary_id"
+    t.integer  "competency_id"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"

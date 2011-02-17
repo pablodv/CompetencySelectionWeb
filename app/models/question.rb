@@ -1,3 +1,3 @@
 class Question < ActiveRecord::Base
-  belongs_to :question_dictionary
+  belongs_to :competency
 end

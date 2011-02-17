@@ -1,5 +1,6 @@
 class Competency < ActiveRecord::Base
   has_many :behaviors
+  has_many :questions
   belongs_to :company
   has_and_belongs_to_many :job_competency_profiles
 

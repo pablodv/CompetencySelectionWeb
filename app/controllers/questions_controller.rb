@@ -1,3 +1,3 @@
 class QuestionsController < CoreController
-	belongs_to :question_dictionary
+  # belongs_to :competency
 end
