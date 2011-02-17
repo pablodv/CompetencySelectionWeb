@@ -1,0 +1,15 @@
+<%= render :partial => 'shared/notice' %>
+<div class="app-form">
+  <% form_for @question do |f| %>
+    <%= f.error_messages %>
+     <div class="field">
+      <%= f.label :competency_id %>
+      <%= f.select :competency_id, options_from_collection_for_select(Competency.find(:all), 'id', 'name'), {:prompt => 'Select a competency please... '} %>
+    </div>
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+    <%= f.submit "Add" %> | <%= link_to 'Cancel', collection_path(@competency) %>
+  <% end %>
+</div>

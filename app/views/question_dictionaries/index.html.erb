@@ -11,7 +11,7 @@
   <% @competencies.each do |competency| %>
 	<tr class='<%= cycle('gray', nil) %>'>
 	  <td><%= competency.name %></td>
-	  <td><%= link_to 'View Questions', questions_path(competency) %></td>
+	  <td><%= link_to 'View Questions', questions_path(:competency_id => competency.id)  %></td>
 	<tr>
 <% end %>
 </table>
