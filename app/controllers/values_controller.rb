@@ -1,0 +1,2 @@
+class ValuesController < CoreController
+end

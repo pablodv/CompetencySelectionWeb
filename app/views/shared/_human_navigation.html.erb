@@ -13,6 +13,10 @@
 <% if permitted_to? :manage, :question_dictionaries %>
   <%= link_to "Question Dictionaries", question_dictionaries_path %>
 <% end %>
+|
+<% if permitted_to? :manage, :values %>
+  <%= link_to "Values", values_path %>
+<% end %>
 <br/>
 
 
