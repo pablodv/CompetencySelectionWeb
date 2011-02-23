@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110222024308) do
+ActiveRecord::Schema.define(:version => 20110223005154) do
 
   create_table "areas", :force => true do |t|
     t.string   "name"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(:version => 20110222024308) do
 
   create_table "behaviors", :force => true do |t|
     t.text     "description"
-    t.decimal  "weighted"
     t.integer  "competency_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -46,10 +45,10 @@ ActiveRecord::Schema.define(:version => 20110222024308) do
     t.string   "name"
     t.text     "definition"
     t.integer  "company_id"
-    t.decimal  "weighted"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "type"
+    t.string   "kind"
+    t.integer  "value_id"
   end
 
   create_table "competencies_job_competency_profile", :id => false, :force => true do |t|

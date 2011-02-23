@@ -2,8 +2,8 @@
   <% form_for @competency do |f| %>
     <%= f.error_messages %>
     <div class="field">
-      <%= f.label :type %>
-      <%= f.select :type, ["organizational","role","specifies"], :prompt => "Choose a type" %>
+      <%= f.label :kind %>
+      <%= f.select :kind, ["organizational","role","specifies"], :prompt => "Choose a type" %>
     </div>
     <div class="field">
       <%= f.label :name %>
@@ -12,6 +12,10 @@
     <div class="field">
       <%= f.label :definition %>
       <%= f.text_area :definition %>
+    </div>
+    <div class="field">
+      <%= f.label :value_id %>
+      <%= f.select :value_id, Value.find(:all).collect{ |v| [v.name, v.id] }, :prompt => "Choose a value" %>
     </div>
     <%= f.submit "Add" %> | <%= link_to 'Cancel', competencies_path %>
   <% end %>
